@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/user_me/CodeProjects'
+make: Leaving directory '/home/user_me/CodeProjects'
+ 
+make: *** No targets.  Stop.
+

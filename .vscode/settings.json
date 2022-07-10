@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "unistd.h": "c",
+        "wait.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "setjmp.h": "c",
+        "libmy_handlers.h": "c"
+    }
+}
