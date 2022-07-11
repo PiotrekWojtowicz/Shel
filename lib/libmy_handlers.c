@@ -48,7 +48,7 @@ void Console_Wait_Pid(const pid_t pid, char *err_msg){
 
 void Task_Fork(char *err_msg){
 
-    const int paren_id = getpid();
+    //const int paren_id = getpid();
     pid_t shell_child_id;
 
     char pid_data[MAXLINE];
