@@ -1,6 +1,6 @@
 #include "libmy_handlers.h"
 
-void Console_Write(const void* buf, char *err_msg){
+void Console_Write(const void* buf, ERROR_MSSG_){
 
     if(write(STDOUT_FILENO, buf, strlen(buf))  == -1){
         perror(err_msg);
@@ -8,7 +8,7 @@ void Console_Write(const void* buf, char *err_msg){
     }
 }
 
-void Console_Read(void* buf, char *err_msg){
+void Console_Read(void* buf, ERROR_MSSG_){
 
     if(read(STDIN_FILENO, buf, strlen(buf))  == -1){
         perror(err_msg);
@@ -32,7 +32,7 @@ void Console_Child_Hanlder(int n){
     Console_Write(mssg, "Handler write error");
 }
 
-void Console_Wait_Pid(const pid_t pid, char *err_msg){
+void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_){
 
     int stat_loc;
     if(waitpid(pid, &stat_loc,0) == -1){
@@ -46,7 +46,7 @@ void Console_Wait_Pid(const pid_t pid, char *err_msg){
     }
 }
 
-void Task_Fork(char *err_msg){
+void Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
 
     //const int paren_id = getpid();
     pid_t shell_child_id;

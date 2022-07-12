@@ -5,6 +5,9 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "setjmp.h": "c",
-        "libmy_handlers.h": "c"
+        "libmy_handlers.h": "c",
+        "signal.h": "c",
+        "string.h": "c",
+        "libmy_shell.h": "c"
     }
 }

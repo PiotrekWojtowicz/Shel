@@ -22,6 +22,7 @@ WHEREAMI = ~/CodeProjects
 CSOURCE = $(WHEREAMI)
 LIBSOURCE = $(WHEREAMI)/lib
 SOURCE = $(CSOURCE) $(LIBSOURCE)
+INCLUDE = $(WHEREAMI)/include
 BIN = $(WHEREAMI)/bin
 
 #Wildcards for source files
@@ -51,12 +52,19 @@ $(LIBOFILES): $(LIBCFILES)
 DYN_LIB = libmy_emulator.so
 DYN_LIB_NAME = my_emulator
 
-$(LIBSOURCE)/$(DYN_LIB): $(LIBOFILES)
+$(INCLUDE)/$(DYN_LIB): $(LIBOFILES)
 	$(LD) -shared -o $@ $^
-	export LD_LIBRARY_PATH+=${LIBSOURCE}
 
-$(EXEC): $(OFILES) $(LIBSOURCE)/$(DYN_LIB)
-	$(LD) -o $@ -L$(LIBSOURCE) -l$(DYN_LIB_NAME) $(FLAGS) -lrt
+$(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
+	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L/home/user_me/CodeProjects/include -l$(DYN_LIB_NAME) -o $@ 
 
 run1: $(EXEC)
+	(export LD_LIBRARY_PATH+="/home/user_me/CodeProjects/include":${LD_LIBRARY_PATH}; \
 	./$(EXEC))
+
+.PHONY: clean
+clean:
+	rm -f ./*.o ./lib/*.o
+
+everything: clean
+	rm ./*.x

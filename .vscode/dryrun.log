@@ -1,5 +1,5 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/user_me/CodeProjects'
-make: '/home/user_me/CodeProjects/lib/libmy_handlers.o' is up to date.
+gcc -Wall -std=c99 --pedantic -fPIC -c -o /home/user_me/CodeProjects/lib/libmy_handlers.o  /home/user_me/CodeProjects/lib/libmy_handlers.c
 make: Leaving directory '/home/user_me/CodeProjects'
  

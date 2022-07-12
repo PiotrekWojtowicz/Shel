@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 11 19:09:40 2022
+# Make data base, printed on Tue Jul 12 22:35:41 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 35)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.600
+I3SOCK = /run/user/1000/i3/ipc-socket.559
 # makefile (from 'Makefile', line 34)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2696c3b1-5dbc-4b31-b5fa-54d34fa83727.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-59e60c31-a837-41bc-8e82-9427cef01ad6.sock
 # makefile (from 'Makefile', line 28)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -89,7 +89,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4590
+VSCODE_PID = 1958
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -105,7 +105,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # makefile (from 'Makefile', line 40)
-EXEC = $(main).x
+EXEC = $(MAIN).x
 # environment
 VSCODE_NLS_CONFIG = {"locale":"pl","availableLanguages":{"*":"pl"},"_languagePackId":"993a25eb46a7e0a4aef446c1661beda3.pl","_translationsConfigFile":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl/tcf.json","_cacheRoot":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl","_resolvedLanguagePackCoreLocation":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl/corrupted.info","_languagePackSupport":true}
 # default
@@ -137,15 +137,13 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 39)
 MAIN = main
 # environment
-INVOCATION_ID = 7d474c8f5c2e41238cc959cdabb5d686
+INVOCATION_ID = 7fba1782c691493e9245843ac88a5c08
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?F = $(notdir $?)
 # environment
 XDG_SEAT = seat0
-# makefile (from 'Makefile', line 25)
-BINSOURCE = $(WHEREAMI)/bin
 # automatic
 +F = $(notdir $+)
 # environment
@@ -155,13 +153,14 @@ GNUMAKEFLAGS :=
 # environment
 LOGNAME = user_me
 # makefile (from 'Makefile', line 30)
+ 
 LIBCFILES = $(foreach D, $(LIBSOURCE), $(wildcard $(D)/*.c))
 # environment
 XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
 # environment
-SYSTEMD_EXEC_PID = 471
+SYSTEMD_EXEC_PID = 465
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -174,6 +173,8 @@ MAKE_VERSION := 4.3
 DYN_LIB = libmy_emulator.so
 # environment
 _ = /usr/bin/make
+# makefile (from 'Makefile', line 25)
+BIN = $(WHEREAMI)/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile', line 22)
@@ -221,11 +222,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 11 files, no impossibilities.
-# . (device 2084, inode 3547144): 11 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 9 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 10 files, no impossibilities.
+# . (device 2084, inode 3547144): 10 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 7 files, no impossibilities.
 
-# 31 files, no impossibilities in 3 directories.
+# 27 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -234,34 +235,29 @@ DYN_LIB_NAME = my_emulator
 	$(CC) $(FLAGS) $(INCFLAG) -c -o $@ $<
 
 # 1 implicit rules, 0 (0.0%) terminal.
+ 
 # Files
 
-run1: .x
+run1: main.x
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 61):
-	./$(EXEC)
+	(export LD_LIBRARY_PATH+="/home/user_me/CodeProjects/lib":${LD_LIBRARY_PATH}; \
+	./$(EXEC))
 
 /home/user_me/CodeProjects/lib/libmy_handlers.o: /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 47):
-	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $<
+	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
 # Not a target:
 /home/user_me/CodeProjects/lib/libmy_handlers.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o /home/user_me/CodeProjects/lib/libmy_emulator.so
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 58):
-	$(LD) -o $@ -L$(LIBSOURCE) -l$(DYN_LIB_NAME) $(FLAGS) -lrt
 
 .PRECIOUS: %.o
 #  Implicit rule search has not been done.
@@ -271,9 +267,24 @@ run1: .x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-11 19:08:38.114475724
+#  Last modified 2022-07-12 22:35:36.744268574
 #  File has been updated.
 #  Successfully updated.
+
+main.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o /home/user_me/CodeProjects/lib/libmy_emulator.so
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 58):
+	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L/home/user_me/CodeProjects/lib -l$(DYN_LIB_NAME) -o $@ 
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 66):
+	rm -f ./*.o ./lib/*.o
 
 # Not a target:
 /home/user_me/CodeProjects/main.o:
@@ -286,7 +297,7 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 55):
-	$(LD) -shared -o $@ $<
+	$(LD) -shared -o $@ $^
 
 # Not a target:
 /home/user_me/CodeProjects/lib/libmy_shell.c:
@@ -305,11 +316,11 @@ all:
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 
 # Not a target:
 %.o:
- 
 #  Precious file (prerequisite of .PRECIOUS).
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -320,22 +331,34 @@ all:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 47):
-	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $<
+	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
+
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+everything: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 69):
+	rm ./*.x
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/34=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/40=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 584 B / avg = 16 B
-# current buf: size = 8162 B / used = 584 B / count = 36 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 574 B / avg = 15 B
+# current buf: size = 8162 B / used = 574 B / count = 36 / avg = 15 B
 
-# strcache performance: lookups = 55 / hit rate = 34%
+# strcache performance: lookups = 60 / hit rate = 40%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=0/55=0%
-# Finished Make data base on Mon Jul 11 19:09:40 2022
+# Load=36/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Tue Jul 12 22:35:41 2022
 
  
