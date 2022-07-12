@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 10 23:08:26 2022
+# Make data base, printed on Tue Jul 12 22:46:32 2022
 
 # Variables
 
@@ -19,9 +19,9 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.564
+I3SOCK = /run/user/1000/i3/ipc-socket.559
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bc21cd93-834b-42ad-af2b-65688b53f480.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-59e60c31-a837-41bc-8e82-9427cef01ad6.sock
 # environment
 VSCODE_CWD = /home/user_me
 # environment
@@ -63,7 +63,7 @@ CURDIR := /home/user_me/CodeProjects
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -79,7 +79,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2154
+VSCODE_PID = 1958
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -115,7 +115,7 @@ MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 898b7f2261924ec9a0c2e6db647d2bb8
+INVOCATION_ID = 7fba1782c691493e9245843ac88a5c08
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -135,7 +135,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 442
+SYSTEMD_EXEC_PID = 465
 # environment
 DISPLAY = :0
 # environment
@@ -182,6 +182,7 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # Directories
 
 # . (device 2084, inode 3547144): 9 files, no impossibilities.
+ 
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -194,7 +195,7 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-10 23:08:25.484589344
+#  Last modified 2022-07-12 22:46:28.614278457
 #  File has been updated.
 #  Successfully updated.
 
@@ -219,12 +220,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 106 B / avg = 7 B
-# current buf: size = 8162 B / used = 106 B / count = 14 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 14 / storage = 105 B / avg = 7 B
+# current buf: size = 8162 B / used = 105 B / count = 14 / avg = 7 B
 
 # strcache performance: lookups = 18 / hit rate = 22%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Sun Jul 10 23:08:26 2022
+# Finished Make data base on Tue Jul 12 22:46:32 2022
 
  
