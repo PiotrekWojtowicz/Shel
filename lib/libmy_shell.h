@@ -30,9 +30,7 @@
 #define DEBUG_MODE
 
 #ifdef DEBUG_MODE
-#define _DEBUG(val) val
-#else
-#define _DEBUG
+#define _DEBUG 1
 #endif
 
 //Shell functions 

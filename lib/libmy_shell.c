@@ -36,43 +36,57 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
 }
 
 void BuiltinCommand(COMMAND_STRING_ argv){
-    return DEBUG_MODE(0);
+    if(_DEBUG){
+        return;
+    }
 }
 
 int Eval(INPUT_CH_ARR_ cmdline){
 
     //So the compilers happy
-    COMMAND_STRING_ command = NULL;
+    char* command[MAXLINE];
     //For the modified cmdline
     char buf[MAXLINE];
     int is_background = 0;
 
-    pid_t Process_id;
+    pid_t proc_pid;
 
     strcpy(buf, cmdline);
     is_background = Parseline(buf, command);
 
-    if(command[0] == NULL)
-        return;
+    if(command[0] == NULL){
+        Console_Write("Unsupported format\nExiting...\n", "Eval exit error");
+        return 0;
+    }
     
-    if(Builtin_Command(command)){
-        Execute_Command(command);
+   // if(Builtin_Command(command)){
+    //    Execute_Command(command);
+    //}
+
+    proc_pid = Task_Fork(command, "Task fork Eval error");
+
+    if(!is_background){
+        int status;
+        if(waitpid(proc_pid, &status, 0) < 0){
+            perror("Waitpid error - Task cannot complete properly");
+            exit(EXIT_FAILURE);
+        }
     }
 
-    //..
-
+    return 1;
 }
 
 void Initalize_Shell(){
-    
-    //NULL so the compiler's happy
-    INPUT_CH_ARR_ input = NULL;
 
+    //NULL so the compiler's happy
+    char input[MAXLINE];
+
+    Console_Write("Welcome to Shell_Emulator v.1.0\n", "Shell Write Error");
     //Evaluate input
     do{
         
-        Console_Write("Welcome to Shell_Emulator v.1.0", "Shell Write Error");
-        Console_Write("\nshell$ ", "Shell Write Error");
+        memset(input, '\0', MAXLINE);
+        Console_Write("shell$ ", "Shell Write Error");
         Console_Read(input, "Shell Read Error");
 
     } while(Eval(input));

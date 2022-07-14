@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 13 20:59:02 2022
+# Make data base, printed on Thu Jul 14 22:54:21 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 36)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.558
+I3SOCK = /run/user/1000/i3/ipc-socket.581
 # makefile (from 'Makefile', line 35)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-be357418-574f-4502-85b4-c7806ef44b99.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-89fbc3a0-2d31-4234-907a-b2b814eded09.sock
 # makefile (from 'Makefile', line 29)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -89,7 +89,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 1604
+VSCODE_PID = 2188
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -139,7 +139,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 40)
 MAIN = main
 # environment
-INVOCATION_ID = b81f2dfeca254786b8aed39714fae1ea
+INVOCATION_ID = f01bf6cc2fee465f830586e9273e1058
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -161,7 +161,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
 # environment
-SYSTEMD_EXEC_PID = 452
+SYSTEMD_EXEC_PID = 458
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -223,11 +223,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 10 files, no impossibilities.
-# . (device 2084, inode 3547144): 10 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 6 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 12 files, no impossibilities.
+# . (device 2084, inode 3547144): 12 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
 
-# 26 files, no impossibilities in 3 directories.
+# 32 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -244,6 +244,7 @@ run1: main.x
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 62):
 	(export LD_LIBRARY_PATH+="/home/user_me/CodeProjects/include":${LD_LIBRARY_PATH}; \
+	export PATH+="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin/site_perl":${PATH}; \
 	./$(EXEC))
 
 /home/user_me/CodeProjects/lib/libmy_handlers.o: /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
@@ -267,7 +268,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-12 22:50:32.060948831
+#  Last modified 2022-07-14 22:53:21.551135685
 #  File has been updated.
 #  Successfully updated.
 
@@ -283,7 +284,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 67):
+#  recipe to execute (from 'Makefile', line 68):
 	rm -f ./*.o ./lib/*.o
 
 # Not a target:
@@ -295,7 +296,6 @@ clean:
 # Not a target:
 /home/user_me/CodeProjects/lib/libmy_shell.c:
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -342,7 +342,7 @@ everything: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 70):
+#  recipe to execute (from 'Makefile', line 71):
 	rm ./*.x
 
 # files hash-table stats:
@@ -353,12 +353,13 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 560 B / avg = 16 B
-# current buf: size = 8162 B / used = 560 B / count = 35 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 38 / storage = 598 B / avg = 15 B
+# current buf: size = 8162 B / used = 598 B / count = 38 / avg = 15 B
 
-# strcache performance: lookups = 59 / hit rate = 40%
+# strcache performance: lookups = 63 / hit rate = 39%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Wed Jul 13 20:59:02 2022
+ 
+# Load=38/8192=0%, Rehash=0, Collisions=0/63=0%
+# Finished Make data base on Thu Jul 14 22:54:21 2022
 
  
