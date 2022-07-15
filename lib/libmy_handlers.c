@@ -52,6 +52,8 @@ pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
     pid_t shell_child_id;
 
     char pid_data[MAXLINE];
+    char eve_command[MAXLINE];
+    sprintf(eve_command,"/bin/%s",command[0]);
         switch ((shell_child_id = fork())){
 
             case FORK_ERROR:
@@ -59,7 +61,7 @@ pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
                 exit(EXIT_FAILURE);
 
             case FORK_SCS:
-                if(execv(command[0], command) < 0){
+                if(execv(eve_command, command) < 0){
                     perror("Cannot run command, error occured");
                     exit(EXIT_FAILURE);
                 }

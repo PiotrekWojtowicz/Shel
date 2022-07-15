@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 14 22:54:21 2022
+# Make data base, printed on Fri Jul 15 21:15:06 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 36)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.581
+I3SOCK = /run/user/1000/i3/ipc-socket.554
 # makefile (from 'Makefile', line 35)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-89fbc3a0-2d31-4234-907a-b2b814eded09.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b33398ba-eb4d-468b-9b34-bd3089c8501b.sock
 # makefile (from 'Makefile', line 29)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -89,7 +89,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2188
+VSCODE_PID = 1773
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -139,7 +139,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 40)
 MAIN = main
 # environment
-INVOCATION_ID = f01bf6cc2fee465f830586e9273e1058
+INVOCATION_ID = 69969e307110405c9aa4854f9eb1925d
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -161,7 +161,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
 # environment
-SYSTEMD_EXEC_PID = 458
+SYSTEMD_EXEC_PID = 463
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -223,11 +223,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 12 files, no impossibilities.
-# . (device 2084, inode 3547144): 12 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
+# . (device 2084, inode 3547144): 13 files, no impossibilities.
 # /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
 
-# 32 files, no impossibilities in 3 directories.
+# 34 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -268,7 +268,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-14 22:53:21.551135685
+#  Last modified 2022-07-14 23:55:23.794600252
 #  File has been updated.
 #  Successfully updated.
 
@@ -329,6 +329,7 @@ all:
 /home/user_me/CodeProjects/include/libmy_emulator.so: /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 56):
 	$(LD) -shared -o $@ $^
@@ -353,13 +354,12 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 598 B / avg = 15 B
-# current buf: size = 8162 B / used = 598 B / count = 38 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 608 B / avg = 15 B
+# current buf: size = 8162 B / used = 608 B / count = 39 / avg = 15 B
 
-# strcache performance: lookups = 63 / hit rate = 39%
+# strcache performance: lookups = 64 / hit rate = 39%
 # hash-table stats:
- 
-# Load=38/8192=0%, Rehash=0, Collisions=0/63=0%
-# Finished Make data base on Thu Jul 14 22:54:21 2022
+# Load=39/8192=0%, Rehash=0, Collisions=0/64=0%
+# Finished Make data base on Fri Jul 15 21:15:06 2022
 
  

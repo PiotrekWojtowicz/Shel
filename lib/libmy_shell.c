@@ -27,7 +27,7 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
        while(*buf && (*buf == ' '))
             buf++;
     }
-    argv[argc] = NULL;
+    argv[argc] = NULL; 
 
     if((is_background = (*argv[argc-1] == BACKGROUND_CH_)) != 0)
         argv[--argc] = NULL; //if the last char indicated background proccess, skip it
