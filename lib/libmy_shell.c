@@ -35,7 +35,7 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
     return is_background;
 }
 
-void BuiltinCommand(COMMAND_STRING_ argv){
+int Builtin_Command(COMMAND_STRING_ argv){
     if(_DEBUG){
         return;
     }
