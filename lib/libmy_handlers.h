@@ -17,15 +17,21 @@
 
 //Macros
 #define ARRAY_LEN(ARRAY_NAME, TYPE)(sizeof(ARRAY_NAME)/sizeof(TYPE))
+
+#ifndef COMMAND_STRING_
 #define COMMAND_STRING_ char **
+#endif
+
+#ifndef ERROR_MSSG_
 #define ERROR_MSSG_ char *err_msg
+#endif
 
 //System call wrapers
 extern void Console_Child_Signal_Set(__sighandler_t handler);
 extern void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_);
 extern void Console_Write(const void* buf, ERROR_MSSG_);
 extern void Console_Read(void* buf, ERROR_MSSG_);
-extern void Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_);
+extern pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_);
 
 //Signal hanlders
 extern void Console_Child_Hanlder(int n);

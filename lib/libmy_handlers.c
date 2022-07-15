@@ -10,7 +10,7 @@ void Console_Write(const void* buf, ERROR_MSSG_){
 
 void Console_Read(void* buf, ERROR_MSSG_){
 
-    if(read(STDIN_FILENO, buf, strlen(buf))  == -1){
+    if(read(STDIN_FILENO, buf, MAXLINE) == -1){
         perror(err_msg);
         exit(EXIT_FAILURE);
     }
@@ -46,12 +46,14 @@ void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_){
     }
 }
 
-void Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
+pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
 
     //const int paren_id = getpid();
     pid_t shell_child_id;
 
     char pid_data[MAXLINE];
+    char eve_command[MAXLINE];
+    sprintf(eve_command,"/bin/%s",command[0]);
         switch ((shell_child_id = fork())){
 
             case FORK_ERROR:
@@ -59,15 +61,14 @@ void Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
                 exit(EXIT_FAILURE);
 
             case FORK_SCS:
-                Console_Write("Forked successfuly!\n", "Write during fork error");
-                exit(EXIT_SUCCESS);
-                //execv
-                break;
+                if(execv(eve_command, command) < 0){
+                    perror("Cannot run command, error occured");
+                    exit(EXIT_FAILURE);
+                }
 
             default:
-                sprintf(pid_data, "Pid of the child %d\n", shell_child_id);
+                sprintf(pid_data, "[DEBUG] Pid of the child %d\n", shell_child_id);
                 Console_Write(pid_data,  "Write fork error");
-                Console_Wait_Pid(shell_child_id, "Console wait error");
-                break;
+                return shell_child_id; 
         }
 }

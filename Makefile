@@ -60,6 +60,7 @@ $(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
 
 run1: $(EXEC)
 	(export LD_LIBRARY_PATH+="/home/user_me/CodeProjects/include":${LD_LIBRARY_PATH}; \
+	export PATH+="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin/site_perl":${PATH}; \
 	./$(EXEC))
 
 .PHONY: clean

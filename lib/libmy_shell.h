@@ -19,10 +19,25 @@
 #define COMMAND_STRING_ char **
 #endif 
 
+#ifndef INPUT_CH_ARR_
+#define INPUT_CH_ARR_ char *
+#endif
+
+#ifndef BACKGROUND_CH_
+#define BACKGROUND_CH_ '&'
+#endif
+
+#define DEBUG_MODE
+
+#ifdef DEBUG_MODE
+#define _DEBUG 1
+#endif
+
 //Shell functions 
-extern COMMAND_STRING_ Initalize_Shell();
-extern void eval(char *cmdline);
-extern int parseline(char *buf, char **argv);
-extern int builtin_command(char **argv);
+extern void Initalize_Shell();
+extern int Eval(INPUT_CH_ARR_ cmdline);
+extern int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv);
+extern int Builtin_Command(COMMAND_STRING_ argv);
+extern void Execute_Command(COMMAND_STRING_ argv);
 
 #endif
