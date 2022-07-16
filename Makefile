@@ -69,3 +69,4 @@ clean:
 
 everything: clean
 	rm ./*.x
+	rm ./include/*.so

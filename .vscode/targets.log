@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 16 00:21:06 2022
+# Make data base, printed on Sat Jul 16 00:27:42 2022
 
 # Variables
 
@@ -268,7 +268,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-16 00:15:41.257870483
+#  Last modified 2022-07-16 00:27:40.321229193
 #  File has been updated.
 #  Successfully updated.
 
@@ -301,7 +301,6 @@ clean:
 
 # Not a target:
 .DEFAULT:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -334,6 +333,7 @@ all:
 #  recipe to execute (from 'Makefile', line 56):
 	$(LD) -shared -o $@ $^
 
+ 
 .PHONY: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -345,6 +345,7 @@ everything: clean
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 71):
 	rm ./*.x
+	rm ./include/*.so
 
 # files hash-table stats:
 # Load=17/1024=2%, Rehash=0, Collisions=0/40=0%
@@ -360,6 +361,6 @@ everything: clean
 # strcache performance: lookups = 60 / hit rate = 40%
 # hash-table stats:
 # Load=36/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Sat Jul 16 00:21:06 2022
+# Finished Make data base on Sat Jul 16 00:27:42 2022
 
  
