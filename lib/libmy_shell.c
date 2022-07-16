@@ -7,6 +7,11 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
     int argc = 0;
     int is_background;
 
+    //if just EOF
+    if(strlen(buf)==1 || strlen(buf) == 0){
+        argv[0] = "EOF";
+        return 0;
+    }
     //!
     //What we are doing here is me get rid of the '\n' char
     buf[strlen(buf)-1] = ' ';
@@ -39,6 +44,12 @@ int Builtin_Command(COMMAND_STRING_ argv){
     if(_DEBUG){
         return 0;
     }
+
+    if(!strcmp(argv[0], "EOF")){
+        return 1;
+    }
+
+    return 0;
 }
 
 int Eval(INPUT_CH_ARR_ cmdline){
@@ -59,9 +70,9 @@ int Eval(INPUT_CH_ARR_ cmdline){
         return 0;
     }
     
-   // if(Builtin_Command(command)){
-    //    Execute_Command(command);
-    //}
+   if(Builtin_Command(command)){
+        return 1;
+    }
 
     proc_pid = Task_Fork(command, "Task fork Eval error");
 
@@ -76,19 +87,16 @@ int Eval(INPUT_CH_ARR_ cmdline){
     return 1;
 }
 
+//Everyhting starts here
 void Initalize_Shell(){
 
-    //NULL so the compiler's happy
     char input[MAXLINE];
-
     Console_Write("Welcome to Shell_Emulator v.1.0\n", "Shell Write Error");
-    //Evaluate input
+
     do{
-        
         memset(input, '\0', MAXLINE);
         Console_Write("shell$ ", "Shell Write Error");
         Console_Read(input, "Shell Read Error");
-
     } while(Eval(input));
 
 }

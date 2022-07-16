@@ -27,14 +27,14 @@
 #endif
 
 //System call wrapers
-extern void Console_Child_Signal_Set(__sighandler_t handler);
+extern void Console_Signal_Set(void(*my_new_hanlder)(int, siginfo_t *, void*));
 extern void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_);
 extern void Console_Write(const void* buf, ERROR_MSSG_);
 extern void Console_Read(void* buf, ERROR_MSSG_);
 extern pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_);
 
 //Signal hanlders
-extern void Console_Child_Hanlder(int n);
+extern void Console_Handler(int signo, siginfo_t *info, void *context);
 
 //Failure exit handling
 extern void Console_AtExit(void);

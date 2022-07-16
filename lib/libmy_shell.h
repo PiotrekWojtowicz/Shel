@@ -27,10 +27,12 @@
 #define BACKGROUND_CH_ '&'
 #endif
 
-#define DEBUG_MODE
+//#define DEBUG_MODE
 
 #ifdef DEBUG_MODE
 #define _DEBUG 1
+#else
+#define _DEBUG 0
 #endif
 
 //Shell functions 

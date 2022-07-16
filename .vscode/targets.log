@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 16 00:27:42 2022
+# Make data base, printed on Sat Jul 16 16:07:28 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 36)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.554
+I3SOCK = /run/user/1000/i3/ipc-socket.561
 # makefile (from 'Makefile', line 35)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9aa558b3-8c2e-48ec-a557-e114d4773862.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d4b5cead-a098-4ac7-a2e9-ab95fe112570.sock
 # makefile (from 'Makefile', line 29)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -89,13 +89,13 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 17268
+VSCODE_PID = 1825
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from 'Makefile', line 16)
-FLAGS = -Wall -std=c99 --pedantic
+FLAGS = -Wall --pedantic
 # automatic
 *F = $(notdir $*)
 # environment
@@ -139,7 +139,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 40)
 MAIN = main
 # environment
-INVOCATION_ID = 69969e307110405c9aa4854f9eb1925d
+INVOCATION_ID = ee591a42f47f4113b7a50a4cb002332f
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -161,7 +161,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
 # environment
-SYSTEMD_EXEC_PID = 463
+SYSTEMD_EXEC_PID = 444
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -223,11 +223,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 11 files, no impossibilities.
-# . (device 2084, inode 3547144): 11 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 6 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
+# . (device 2084, inode 3547144): 13 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
 
-# 28 files, no impossibilities in 3 directories.
+# 34 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -268,7 +268,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-16 00:27:40.321229193
+#  Last modified 2022-07-16 16:07:27.120774878
 #  File has been updated.
 #  Successfully updated.
 
@@ -333,13 +333,13 @@ all:
 #  recipe to execute (from 'Makefile', line 56):
 	$(LD) -shared -o $@ $^
 
- 
 .PHONY: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 everything: clean
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -355,12 +355,12 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 570 B / avg = 15 B
-# current buf: size = 8162 B / used = 570 B / count = 36 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 608 B / avg = 15 B
+# current buf: size = 8162 B / used = 608 B / count = 39 / avg = 15 B
 
-# strcache performance: lookups = 60 / hit rate = 40%
+# strcache performance: lookups = 64 / hit rate = 39%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Sat Jul 16 00:27:42 2022
+# Load=39/8192=0%, Rehash=0, Collisions=0/64=0%
+# Finished Make data base on Sat Jul 16 16:07:28 2022
 
  

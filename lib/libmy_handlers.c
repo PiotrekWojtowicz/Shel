@@ -16,20 +16,41 @@ void Console_Read(void* buf, ERROR_MSSG_){
     }
 }
 
-void Console_Child_Signal_Set(__sighandler_t handler){
+void Console_Signal_Set(void(*my_new_hanlder)(int, siginfo_t *, void*)){
 
-    if(signal(SIGCHLD, handler) == SIG_ERR){
-        Console_Write("Signal set error!", "Child Singal Set Write error");
-        exit(EXIT_FAILURE);
+    struct sigaction new_act;
+    new_act.sa_flags = SA_SIGINFO | SA_RESTART;
+    new_act.sa_sigaction = my_new_hanlder;
+
+    if(sigaction(SIGCHLD, &new_act, NULL) == -1){
+        perror("SIGCHLD could not have been set");
+        _exit(EXIT_FAILURE);
     }
+
+    if(sigaction(SIGINT, &new_act, NULL) == -1){
+        perror("SIGCHLD could not have been set");
+        _exit(EXIT_FAILURE);
+    }
+
 }
 
-void Console_Child_Hanlder(int n){
+void Console_Handler(int signo, siginfo_t *info, void *context){
 
     char mssg[MAXLINE];
-    sprintf(mssg, "[DEBUG] Child terminated\n[DEBUG] Returing to shell\n");
+    switch (signo)
+    {
+    case SIGCHLD:
+        sprintf(mssg, "[DEBUG] Child terminated\n[DEBUG] Returing to shell\n");
+        Console_Write(mssg, "Handler write error");
+        break;
 
-    Console_Write(mssg, "Handler write error");
+    case SIGINT:
+        Console_Write("\b\b  \b\b", "Error");
+        break;
+    
+    default:
+        break;
+    };
 }
 
 void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_){
@@ -48,11 +69,7 @@ void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_){
 
 pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
 
-    //const int paren_id = getpid();
     pid_t shell_child_id;
-
-    //set the signal handler for child proccesses
-    Console_Child_Signal_Set(Console_Child_Hanlder);
 
     char pid_data[MAXLINE];
     char eve_command[MAXLINE];
