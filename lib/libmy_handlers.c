@@ -51,6 +51,9 @@ pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
     //const int paren_id = getpid();
     pid_t shell_child_id;
 
+    //set the signal handler for child proccesses
+    Console_Child_Signal_Set(Console_Child_Hanlder);
+
     char pid_data[MAXLINE];
     char eve_command[MAXLINE];
     sprintf(eve_command,"/bin/%s",command[0]);
