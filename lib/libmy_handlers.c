@@ -27,7 +27,7 @@ void Console_Child_Signal_Set(__sighandler_t handler){
 void Console_Child_Hanlder(int n){
 
     char mssg[MAXLINE];
-    sprintf(mssg, "Child terminated\nReturing to shell\n");
+    sprintf(mssg, "[DEBUG] Child terminated\n[DEBUG] Returing to shell\n");
 
     Console_Write(mssg, "Handler write error");
 }
