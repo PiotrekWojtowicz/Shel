@@ -92,3 +92,8 @@ pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
                 return shell_child_id; 
         }
 }
+
+void Console_AtExit(void){
+    /*Temporarly empty exit*/
+    exit();
+}

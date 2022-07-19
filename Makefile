@@ -24,6 +24,7 @@ LIBSOURCE = $(WHEREAMI)/lib
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 INCLUDE = $(WHEREAMI)/include
 BIN = $(WHEREAMI)/bin
+FULLINCLUDEPATH = /home/user_me/CodeProjects/include
 
 #Wildcards for source files
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
@@ -56,11 +57,10 @@ $(INCLUDE)/$(DYN_LIB): $(LIBOFILES)
 	$(LD) -shared -o $@ $^
 
 $(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
-	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L/home/user_me/CodeProjects/include -l$(DYN_LIB_NAME) -o $@ 
+	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
 
 run1: $(EXEC)
-	(export LD_LIBRARY_PATH+="/home/user_me/CodeProjects/include":${LD_LIBRARY_PATH}; \
-	export PATH+="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin/site_perl":${PATH}; \
+	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	./$(EXEC))
 
 .PHONY: clean

@@ -10,7 +10,10 @@
         "string.h": "c",
         "libmy_shell.h": "c",
         "sigaction.h": "c",
-        "types.h": "c"
+        "types.h": "c",
+        "xcb.h": "c",
+        "uio.h": "c",
+        "pthread.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

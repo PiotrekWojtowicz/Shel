@@ -36,7 +36,7 @@ extern pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_);
 //Signal hanlders
 extern void Console_Handler(int signo, siginfo_t *info, void *context);
 
-//Failure exit handling
+//Exit handling
 extern void Console_AtExit(void);
 
 #endif
