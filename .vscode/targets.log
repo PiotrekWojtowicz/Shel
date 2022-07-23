@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 21:15:06 2022
+# Make data base, printed on Sat Jul 23 00:26:52 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 36)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.554
+I3SOCK = /run/user/1000/i3/ipc-socket.568
 # makefile (from 'Makefile', line 35)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b33398ba-eb4d-468b-9b34-bd3089c8501b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-45313454-68cf-499c-bd57-2c7c5a2e0e36.sock
 # makefile (from 'Makefile', line 29)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -89,7 +89,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 1773
+VSCODE_PID = 6078
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -132,6 +132,7 @@ MAKEFILES :=
 MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
+ 
 # makefile (from 'Makefile', line 17)
 INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 # makefile (from 'Makefile', line 37)
@@ -139,7 +140,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 40)
 MAIN = main
 # environment
-INVOCATION_ID = 69969e307110405c9aa4854f9eb1925d
+INVOCATION_ID = 07f3778222b443079cd0e455f2fc25b6
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -161,7 +162,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
 # environment
-SYSTEMD_EXEC_PID = 463
+SYSTEMD_EXEC_PID = 444
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -216,6 +217,7 @@ CC = gcc
 DYN_LIB_NAME = my_emulator
 # variable set hash-table stats:
 # Load=101/1024=10%, Rehash=0, Collisions=15/166=9%
+ 
 
 # Pattern-specific Variable Values
 
@@ -223,11 +225,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
-# . (device 2084, inode 3547144): 13 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 11 files, no impossibilities.
+# . (device 2084, inode 3547144): 11 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 6 files, no impossibilities.
 
-# 34 files, no impossibilities in 3 directories.
+# 28 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -268,7 +270,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-14 23:55:23.794600252
+#  Last modified 2022-07-23 00:26:49.291149403
 #  File has been updated.
 #  Successfully updated.
 
@@ -317,6 +319,7 @@ all:
 #  Precious file (prerequisite of .PRECIOUS).
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 /home/user_me/CodeProjects/lib/libmy_shell.o: /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
@@ -329,7 +332,6 @@ all:
 /home/user_me/CodeProjects/include/libmy_emulator.so: /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 56):
 	$(LD) -shared -o $@ $^
@@ -354,12 +356,12 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 608 B / avg = 15 B
-# current buf: size = 8162 B / used = 608 B / count = 39 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 570 B / avg = 15 B
+# current buf: size = 8162 B / used = 570 B / count = 36 / avg = 15 B
 
-# strcache performance: lookups = 64 / hit rate = 39%
+# strcache performance: lookups = 60 / hit rate = 40%
 # hash-table stats:
-# Load=39/8192=0%, Rehash=0, Collisions=0/64=0%
-# Finished Make data base on Fri Jul 15 21:15:06 2022
+# Load=36/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Sat Jul 23 00:26:52 2022
 
  
