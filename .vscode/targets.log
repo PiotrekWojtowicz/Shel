@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 23:25:32 2022
+# Make data base, printed on Sat Jul 23 00:03:50 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 37)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.590
+I3SOCK = /run/user/1000/i3/ipc-socket.568
 # makefile (from 'Makefile', line 36)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6722f892-5f67-4bba-a0b7-fdb1756dba2f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-45313454-68cf-499c-bd57-2c7c5a2e0e36.sock
 # makefile (from 'Makefile', line 30)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4711
+VSCODE_PID = 6078
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -141,7 +141,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 41)
 MAIN = main
 # environment
-INVOCATION_ID = 3c4a31fc3bcb425980c28934e10ea198
+INVOCATION_ID = 07f3778222b443079cd0e455f2fc25b6
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -163,7 +163,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
 # environment
-SYSTEMD_EXEC_PID = 457
+SYSTEMD_EXEC_PID = 444
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -287,6 +287,7 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 68):
 	rm -f ./*.o ./lib/*.o
+ 
 
 # Not a target:
 /home/user_me/CodeProjects/main.o:
@@ -306,7 +307,6 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 all:
 #  Command line target.
@@ -362,6 +362,6 @@ everything: clean
 # strcache performance: lookups = 64 / hit rate = 39%
 # hash-table stats:
 # Load=39/8192=0%, Rehash=0, Collisions=0/64=0%
-# Finished Make data base on Tue Jul 19 23:25:32 2022
+# Finished Make data base on Sat Jul 23 00:03:50 2022
 
  

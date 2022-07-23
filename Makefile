@@ -61,7 +61,7 @@ $(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
 
 run1: $(EXEC)
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
-	./$(EXEC))
+	xterm -e $(EXEC))
 
 .PHONY: clean
 clean:

@@ -17,7 +17,6 @@ void Console_Read(void* buf, ERROR_MSSG_){
 }
 
 void Console_Signal_Set(void(*my_new_hanlder)(int, siginfo_t *, void*)){
-
     struct sigaction new_act;
     new_act.sa_flags = SA_SIGINFO | SA_RESTART;
     new_act.sa_sigaction = my_new_hanlder;
@@ -95,5 +94,5 @@ pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
 
 void Console_AtExit(void){
     /*Temporarly empty exit*/
-    exit();
+    exit(1);
 }

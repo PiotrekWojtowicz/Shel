@@ -1,2 +1,2 @@
-# Shell_Emulator
-Unix-like shell emulator 
+# Shell
+Unix-like shell
