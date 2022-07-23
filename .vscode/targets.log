@@ -8,7 +8,11 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
+<<<<<<< HEAD
 # Make data base, printed on Sat Jul 23 00:03:50 2022
+=======
+# Make data base, printed on Sat Jul 23 00:26:52 2022
+>>>>>>> main
 
 # Variables
 
@@ -22,11 +26,19 @@ NO_AT_BRIDGE = 1
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
 I3SOCK = /run/user/1000/i3/ipc-socket.568
+<<<<<<< HEAD
 # makefile (from 'Makefile', line 36)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
 VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-45313454-68cf-499c-bd57-2c7c5a2e0e36.sock
 # makefile (from 'Makefile', line 30)
+=======
+# makefile (from 'Makefile', line 35)
+OFILES = $(patsubst %.c, %.o, $(CFILES))
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-45313454-68cf-499c-bd57-2c7c5a2e0e36.sock
+# makefile (from 'Makefile', line 29)
+>>>>>>> main
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
 VSCODE_CWD = /home/user_me
@@ -134,6 +146,7 @@ MAKEFILES :=
 MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
+ 
 # makefile (from 'Makefile', line 17)
 INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 # makefile (from 'Makefile', line 38)
@@ -217,7 +230,12 @@ CC = gcc
 # makefile (from 'Makefile', line 54)
 DYN_LIB_NAME = my_emulator
 # variable set hash-table stats:
+<<<<<<< HEAD
 # Load=102/1024=10%, Rehash=0, Collisions=15/167=9%
+=======
+# Load=101/1024=10%, Rehash=0, Collisions=15/166=9%
+ 
+>>>>>>> main
 
 # Pattern-specific Variable Values
 
@@ -225,11 +243,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
-# . (device 2084, inode 3547144): 13 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 11 files, no impossibilities.
+# . (device 2084, inode 3547144): 11 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 6 files, no impossibilities.
 
-# 34 files, no impossibilities in 3 directories.
+# 28 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -269,7 +287,11 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2022-07-19 23:16:25.770861127
+=======
+#  Last modified 2022-07-23 00:26:49.291149403
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -319,6 +341,7 @@ all:
 #  Precious file (prerequisite of .PRECIOUS).
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 /home/user_me/CodeProjects/lib/libmy_shell.o: /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
@@ -356,12 +379,17 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 608 B / avg = 15 B
-# current buf: size = 8162 B / used = 608 B / count = 39 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 570 B / avg = 15 B
+# current buf: size = 8162 B / used = 570 B / count = 36 / avg = 15 B
 
-# strcache performance: lookups = 64 / hit rate = 39%
+# strcache performance: lookups = 60 / hit rate = 40%
 # hash-table stats:
+<<<<<<< HEAD
 # Load=39/8192=0%, Rehash=0, Collisions=0/64=0%
 # Finished Make data base on Sat Jul 23 00:03:50 2022
+=======
+# Load=36/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Sat Jul 23 00:26:52 2022
+>>>>>>> main
 
  
