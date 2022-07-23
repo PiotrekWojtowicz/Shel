@@ -61,7 +61,7 @@ $(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
 
 run1: $(EXEC)
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
-	xterm -e $(EXEC))
+	xterm -e ./$(EXEC) -fa DejaVuSansMono)
 
 .PHONY: clean
 clean:
