@@ -7,7 +7,10 @@
 #include <signal.h>
 #include <wait.h>
 #include <string.h>
+#ifndef LIBM_SHELL
+#define LIBM_SHELL
 #include "libmy_shell.h"
+#endif
 
 #define MAXARGS 128
 #define MAXLINE 64
