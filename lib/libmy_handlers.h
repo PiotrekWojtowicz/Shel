@@ -30,10 +30,16 @@
 #endif
 
 //System call wrapers
+
+//Sets the new signal hanlder
 extern void Console_Signal_Set(void(*my_new_hanlder)(int, siginfo_t *, void*));
+//Waits for the child with given pid
 extern void Console_Wait_Pid(const pid_t pid, ERROR_MSSG_);
+//Writes to the standard output
 extern void Console_Write(const void* buf, ERROR_MSSG_);
+//Reads from the standard input
 extern void Console_Read(void* buf, ERROR_MSSG_);
+//Froks exectuing given command
 extern pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_);
 
 //Signal hanlders

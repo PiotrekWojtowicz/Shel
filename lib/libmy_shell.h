@@ -36,30 +36,13 @@
 #define _DEBUG 0
 #endif
 
-#ifndef BUILTINS
-#define BUILTINS
-
-//Built in commands section
-const enum Builtins{CD, HELP, EXIT};
-
-//BuiltIns description
-typedef struct{
-    INPUT_CH_ARR_ command;
-    INPUT_CH_ARR_ description;
-} Builtin_Info;
-#endif
-
 //else include my_hanlder header
 #include "libmy_handlers.h"
-
-//Initialize builtins
-extern void Initialize_Built_Ins(void);
+#include "libmy_builtins.h"
 
 //Shell functions 
 extern void Initalize_Shell();
 extern int Eval(INPUT_CH_ARR_ cmdline);
 extern int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv);
-extern int Builtin_Command(COMMAND_STRING_ argv);
-extern int Find_Built_Command(COMMAND_STRING_ argv) PERF_IMPRV;
 extern int Execute_Built_In(COMMAND_STRING_ argv);
 #endif

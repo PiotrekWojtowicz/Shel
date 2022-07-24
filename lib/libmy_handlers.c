@@ -40,7 +40,7 @@ void Console_Handler(int signo, siginfo_t *info, void *context){
     {
     case SIGCHLD:
         sprintf(mssg, "[DEBUG] Child terminated\n[DEBUG] Returing to shell\n");
-        Console_Write(mssg, "Handler write error");
+        //Console_Write(mssg, "Handler write error");
         break;
 
     case SIGINT:
@@ -87,7 +87,7 @@ pid_t Task_Fork(COMMAND_STRING_ command, ERROR_MSSG_){
 
             default:
                 sprintf(pid_data, "[DEBUG] Pid of the child %d\n", shell_child_id);
-                Console_Write(pid_data,  "Write fork error");
+                //Console_Write(pid_data,  "Write fork error");
                 return shell_child_id; 
         }
 }

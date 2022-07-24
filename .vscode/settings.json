@@ -13,7 +13,8 @@
         "types.h": "c",
         "xcb.h": "c",
         "uio.h": "c",
-        "pthread.h": "c"
+        "pthread.h": "c",
+        "libmy_builtins.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

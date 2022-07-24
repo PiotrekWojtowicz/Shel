@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 24 15:16:42 2022
+# Make data base, printed on Sun Jul 24 21:08:57 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 37)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.583
+I3SOCK = /run/user/1000/i3/ipc-socket.594
 # makefile (from 'Makefile', line 36)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-3d3621d7-7b4c-4a41-9b29-9f812f90f75d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7bd51226-873c-4adf-9883-0df40b2cab2d.sock
 # makefile (from 'Makefile', line 30)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2699
+VSCODE_PID = 5998
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -141,7 +141,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 41)
 MAIN = main
 # environment
-INVOCATION_ID = 13e6177507a5400eaba496bccd910782
+INVOCATION_ID = 971dca0be24147759b37fe0e4a854eea
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -161,9 +161,9 @@ LIBCFILES = $(foreach D, $(LIBSOURCE), $(wildcard $(D)/*.c))
 # environment
 XDG_VTNR = 1
 # makefile
-.DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_handlers.o
+.DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_builtins.o
 # environment
-SYSTEMD_EXEC_PID = 440
+SYSTEMD_EXEC_PID = 444
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -227,9 +227,9 @@ DYN_LIB_NAME = my_emulator
 
 # /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
 # . (device 2084, inode 3547144): 13 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 10 files, no impossibilities.
 
-# 34 files, no impossibilities in 3 directories.
+# 36 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -248,7 +248,7 @@ run1: main.x
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	xterm -e ./$(EXEC)) 
 
-/home/user_me/CodeProjects/lib/libmy_handlers.o: /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
+/home/user_me/CodeProjects/lib/libmy_handlers.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -273,7 +273,7 @@ Makefile:
 #  File has been updated.
 #  Successfully updated.
 
-main.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o /home/user_me/CodeProjects/include/libmy_emulator.so
+main.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_builtins.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o /home/user_me/CodeProjects/include/libmy_emulator.so
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -298,6 +298,7 @@ clean:
 /home/user_me/CodeProjects/lib/libmy_shell.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 # Not a target:
@@ -313,6 +314,13 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+/home/user_me/CodeProjects/lib/libmy_builtins.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 49):
+	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
+
 # Not a target:
 %.o:
 #  Precious file (prerequisite of .PRECIOUS).
@@ -320,14 +328,14 @@ all:
 #  Modification time never checked.
 #  File has not been updated.
 
-/home/user_me/CodeProjects/lib/libmy_shell.o: /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
+/home/user_me/CodeProjects/lib/libmy_shell.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_shell.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 49):
 	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
-/home/user_me/CodeProjects/include/libmy_emulator.so: /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o
+/home/user_me/CodeProjects/include/libmy_emulator.so: /home/user_me/CodeProjects/lib/libmy_builtins.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_shell.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -347,20 +355,26 @@ everything: clean
 	rm ./*.x
 	rm ./include/*.so
 
+# Not a target:
+/home/user_me/CodeProjects/lib/libmy_builtins.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/40=0%
+# Load=19/1024=2%, Rehash=0, Collisions=0/45=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 608 B / avg = 15 B
-# current buf: size = 8162 B / used = 608 B / count = 39 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 43 / storage = 738 B / avg = 17 B
+# current buf: size = 8162 B / used = 738 B / count = 43 / avg = 17 B
 
-# strcache performance: lookups = 64 / hit rate = 39%
+# strcache performance: lookups = 71 / hit rate = 39%
 # hash-table stats:
-# Load=39/8192=0%, Rehash=0, Collisions=0/64=0%
-# Finished Make data base on Sun Jul 24 15:16:42 2022
+# Load=43/8192=1%, Rehash=0, Collisions=0/71=0%
+# Finished Make data base on Sun Jul 24 21:08:57 2022
 
  

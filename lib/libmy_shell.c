@@ -1,22 +1,5 @@
 #include "libmy_shell.h"
 
-/*
-    Globals 
-    Needed to store the integral values of the program
-*/
-
- const char *builtins[]={
-    "cd",
-    "help",
-    "exit"
-};
-
-Builtin_Info Builtin_Info_[ARRAY_LEN(builtins, char*)];
-
-/*
-    End globals
-*/
-
 int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
 
     INPUT_CH_ARR_ begin = NULL;
@@ -56,41 +39,11 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
 
     return is_background;
 }
-int Find_Built_Command(COMMAND_STRING_ argv) PERF_IMPRV{
-
-    //Linear time complexity
-    //Possible bottlneck
-    int command_count = ARRAY_LEN(builtins, char*);
-    for( int i = 0; i < command_count; i++){
-        if(!strcmp(argv[0], builtins[i]))
-            return 1;
-    }
-    return -1;
-}
-
-/*temporary solution*/
-int Execute_Built_In(COMMAND_STRING_ argv){
-    //Check the BuiltIn
-   if(!strcmp(argv[0], builtins[0])){
-        if(chdir(argv[1])!=0){
-            perror("Cannot change the directory");
-            return -1;
-        }
-   }
-    else if(!strcmp(argv[0], builtins[1])){
-        Console_Write("\033[33;44mHeh you're gonna need that using this shell\n\033[00;00m", "Builtin Write error");
-        for(int i = 0; ARRAY_LEN(builtins, char*) > i; i++){
-            Console_Write(Builtin_Info_[i].description, "Help Write error");
-        } 
-    }
-    return 1;
-}
 
 int Builtin_Command(COMMAND_STRING_ argv){
     if(_DEBUG){
         return 0;
     }
-
     //If didnt find the builtin
     if(Find_Built_Command(argv) == -1){
         return 0;
@@ -137,19 +90,6 @@ int Eval(INPUT_CH_ARR_ cmdline){
 
     return 1;
 }
-
-void Initialize_Built_Ins(void){
-    //Initialize builitins
-        Builtin_Info_[CD].command = "cd";
-        Builtin_Info_[CD].description = "Implementation of popular change directory - (should) work like the original one\n";
-
-        Builtin_Info_[HELP].command = "help";
-        Builtin_Info_[HELP].description = "Help command used to display information about builtin commands\n";
-
-       Builtin_Info_[EXIT].command = "exit";
-       Builtin_Info_[EXIT].description = "Used to exit the shell\n";
-}
-
 //Everyhting starts here
 void Initalize_Shell(){
 
@@ -157,12 +97,11 @@ void Initalize_Shell(){
     Initialize_Built_Ins(); //Should never throw
 
     char input[MAXLINE];
-    Console_Write("Welcome to Shell_Emulator v.1.1\n", "Shell Write Error");
+    Console_Write("Welcome back v.2.1\n", "Shell Write Error");
 
     do{
         memset(input, '\0', MAXLINE);
-        Console_Write("shell$ ", "Shell Write Error");
+        Console_Write("\033[30;47;5mshell$\033[0;0m ", "Shell Write Error");
         Console_Read(input, "Shell Read Error");
     } while(Eval(input));
-
 }
