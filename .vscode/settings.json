@@ -8,6 +8,13 @@
         "libmy_handlers.h": "c",
         "signal.h": "c",
         "string.h": "c",
-        "libmy_shell.h": "c"
-    }
+        "libmy_shell.h": "c",
+        "sigaction.h": "c",
+        "types.h": "c",
+        "xcb.h": "c",
+        "uio.h": "c",
+        "pthread.h": "c",
+        "libmy_builtins.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

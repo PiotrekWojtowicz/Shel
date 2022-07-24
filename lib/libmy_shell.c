@@ -7,6 +7,11 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
     int argc = 0;
     int is_background;
 
+    //if just EOF
+    if(strlen(buf)==1 || strlen(buf) == 0){
+        argv[0] = "EOF";
+        return 0;
+    }
     //!
     //What we are doing here is me get rid of the '\n' char
     buf[strlen(buf)-1] = ' ';
@@ -37,8 +42,18 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
 
 int Builtin_Command(COMMAND_STRING_ argv){
     if(_DEBUG){
-        return;
+        return 0;
     }
+    //If didnt find the builtin
+    if(Find_Built_Command(argv) == -1){
+        return 0;
+    }
+    //Execute
+    if(Execute_Built_In(argv) == -1){
+        Console_Write("Cannot execute builtin", "Builtin Write error");
+        return 0;
+    }
+    return 1;
 }
 
 int Eval(INPUT_CH_ARR_ cmdline){
@@ -59,9 +74,9 @@ int Eval(INPUT_CH_ARR_ cmdline){
         return 0;
     }
     
-   // if(Builtin_Command(command)){
-    //    Execute_Command(command);
-    //}
+   if(Builtin_Command(command)){
+        return 1;
+    }
 
     proc_pid = Task_Fork(command, "Task fork Eval error");
 
@@ -75,20 +90,18 @@ int Eval(INPUT_CH_ARR_ cmdline){
 
     return 1;
 }
-
+//Everyhting starts here
 void Initalize_Shell(){
 
-    //NULL so the compiler's happy
+    //Initialize builtins
+    Initialize_Built_Ins(); //Should never throw
+
     char input[MAXLINE];
+    Console_Write("Welcome back v.2.1\n", "Shell Write Error");
 
-    Console_Write("Welcome to Shell_Emulator v.1.0\n", "Shell Write Error");
-    //Evaluate input
     do{
-        
         memset(input, '\0', MAXLINE);
-        Console_Write("shell$ ", "Shell Write Error");
+        Console_Write("\033[30;47;5mshell$\033[0;0m ", "Shell Write Error");
         Console_Read(input, "Shell Read Error");
-
     } while(Eval(input));
-
 }
