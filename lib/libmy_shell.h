@@ -25,7 +25,8 @@
 #define BACKGROUND_CH_ '&'
 #endif
 
-//possible performance improvement
+//check for possible performance improvement
+//if you are interested in commiting to this repo, pls look for this macro
 #define PERF_IMPRV
 
 //#define DEBUG_MODE

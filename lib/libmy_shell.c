@@ -50,7 +50,7 @@ int Builtin_Command(COMMAND_STRING_ argv){
     }
     //Execute
     if(Execute_Built_In(argv) == -1){
-        Console_Write("Cannot execute builtin", "Builtin Write error");
+        Console_Write("Cannot execute builtin\n", "Builtin Write error");
         return 0;
     }
     return 1;
