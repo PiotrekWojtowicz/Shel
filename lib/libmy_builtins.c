@@ -65,8 +65,9 @@ int Execute_Built_In(COMMAND_STRING_ argv){
         }
     }
     else if(!strcmp(argv[0], builtins[2])){
-        //to be continued
-        _exit(EXIT_SUCCESS);
+        //Run the exit command
+        if(Command_Exit() == 0)
+            return 0;
     }
     return 1;
 }
@@ -126,4 +127,15 @@ int Command_Help(void){
         return 0;
 }
 
+int Command_Exit(void){
+    //Exit command wraper
+    //Check if any kids exist if so then dont exit
+    int temp_status;
+    if(waitpid(-1, temp_status, WNOHANG | WUNTRACED) == 0){
+        Console_Write("Cannot close\nChild proccess in progress\n", "Exit Write error");
+        return 0;
+    }
+    else
+        exit(EXIT_SUCCESS);
+}
 
