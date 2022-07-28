@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 28 22:58:30 2022
+# Make data base, printed on Thu Jul 28 23:31:14 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ I3SOCK = /run/user/1000/i3/ipc-socket.570
 # makefile (from 'Makefile', line 36)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1a6a28e2-40e7-4c2e-8593-d703c504ed53.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bf81dd8f-d655-4ff2-b694-0dc0f186f5a7.sock
 # makefile (from 'Makefile', line 30)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -202,7 +202,6 @@ XDG_SESSION_ID = 1
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
- 
 # default
 SUFFIXES := 
 # makefile (from 'Makefile', line 13)
@@ -218,6 +217,7 @@ CC = gcc
 # makefile (from 'Makefile', line 54)
 DYN_LIB_NAME = my_emulator
 # variable set hash-table stats:
+ 
 # Load=102/1024=10%, Rehash=0, Collisions=16/169=9%
 
 # Pattern-specific Variable Values
@@ -226,11 +226,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 15 files, no impossibilities.
-# . (device 2084, inode 3547144): 15 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 11 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
+# . (device 2084, inode 3547144): 13 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
 
-# 41 files, no impossibilities in 3 directories.
+# 34 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -320,7 +320,6 @@ all:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 49):
- 
 	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
 test: main.x
@@ -333,6 +332,7 @@ test: main.x
 
 # Not a target:
 %.o:
+ 
 #  Precious file (prerequisite of .PRECIOUS).
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -379,12 +379,12 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 47 / storage = 780 B / avg = 16 B
-# current buf: size = 8162 B / used = 780 B / count = 47 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 43 / storage = 725 B / avg = 16 B
+# current buf: size = 8162 B / used = 725 B / count = 43 / avg = 16 B
 
-# strcache performance: lookups = 77 / hit rate = 38%
+# strcache performance: lookups = 72 / hit rate = 40%
 # hash-table stats:
-# Load=47/8192=1%, Rehash=0, Collisions=0/77=0%
-# Finished Make data base on Thu Jul 28 22:58:30 2022
+# Load=43/8192=1%, Rehash=0, Collisions=0/72=0%
+# Finished Make data base on Thu Jul 28 23:31:14 2022
 
  
