@@ -14,8 +14,6 @@
     "EOF"
 };
 
-static const char *xterm_query = "xrdb -merge ~/.Xresources";
-
 static Builtin_Info Builtin_Info_[ARRAY_LEN(builtins, char*)];
 
 /*
@@ -24,6 +22,9 @@ static Builtin_Info Builtin_Info_[ARRAY_LEN(builtins, char*)];
 
 void Initialize_Built_Ins(void){
     //Initialize builitins struct
+    //
+    //   New idea - fetch the text from a file.
+    //
         Builtin_Info_[CD].command = "\033[00;41;5m * cd * \033[00;00m\n"; // CD builtin
         Builtin_Info_[CD].description = "Implementation of popular change directory - should work like the original one\n";
 
@@ -74,6 +75,12 @@ int Execute_Built_In(COMMAND_STRING_ argv){
 }
 
 int Command_Cd(INPUT_CH_ARR_ directory){
+        //if no dir just skip
+        if(directory == NULL){
+            Console_Write("\033[00;41mNo directory specified\n\033[00;00m", "Cd Write error");
+            return -1;
+        }
+
         if(!strcmp(directory,(char*)"~")){
             char *temp = NULL;
             if((temp = getlogin()) == NULL){
@@ -143,4 +150,3 @@ int Command_Exit(COMMAND_STRING_ argv){
     else
         exit(EXIT_SUCCESS);
 }
-

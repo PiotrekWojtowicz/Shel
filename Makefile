@@ -13,7 +13,7 @@ CC = gcc
 LD = $(CC)
 
 #Compilation flags
-FLAGS = -Wall --pedantic
+FLAGS = -Wall --pedantic -g
 INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 DFLAGS = -fPIC
 
@@ -60,8 +60,13 @@ $(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
 	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
 
 run1: $(EXEC)
+	xrdb -merge /home/user_me/.Xresources
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	xterm -e ./$(EXEC)) 
+
+test: $(EXEC)
+	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
+	 gdb $(EXEC)) 
 
 .PHONY: clean
 clean:
