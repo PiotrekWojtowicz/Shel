@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 28 23:31:14 2022
+# Make data base, printed on Sat Jul 30 23:16:17 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 37)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.570
+I3SOCK = /run/user/1000/i3/ipc-socket.590
 # makefile (from 'Makefile', line 36)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bf81dd8f-d655-4ff2-b694-0dc0f186f5a7.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bb47396c-3f11-4dc8-bd1f-edb980f08ddf.sock
 # makefile (from 'Makefile', line 30)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 776
+VSCODE_PID = 734
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -141,7 +141,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 41)
 MAIN = main
 # environment
-INVOCATION_ID = a80a4756fc1a46a48b5a736d8f3ebaf7
+INVOCATION_ID = aacad3e36ac6425da67de7e45f51acc2
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -163,7 +163,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_builtins.o
 # environment
-SYSTEMD_EXEC_PID = 467
+SYSTEMD_EXEC_PID = 463
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -217,7 +217,6 @@ CC = gcc
 # makefile (from 'Makefile', line 54)
 DYN_LIB_NAME = my_emulator
 # variable set hash-table stats:
- 
 # Load=102/1024=10%, Rehash=0, Collisions=16/169=9%
 
 # Pattern-specific Variable Values
@@ -283,6 +282,7 @@ main.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_b
 	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
 
 clean:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -332,7 +332,6 @@ test: main.x
 
 # Not a target:
 %.o:
- 
 #  Precious file (prerequisite of .PRECIOUS).
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -385,6 +384,6 @@ everything: clean
 # strcache performance: lookups = 72 / hit rate = 40%
 # hash-table stats:
 # Load=43/8192=1%, Rehash=0, Collisions=0/72=0%
-# Finished Make data base on Thu Jul 28 23:31:14 2022
+# Finished Make data base on Sat Jul 30 23:16:17 2022
 
  

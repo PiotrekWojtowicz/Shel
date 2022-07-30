@@ -1,5 +1,5 @@
-#ifndef MY_SHELL_1_0
-#define MY_SHELL_1_0
+#ifndef MY_SHELL_2_1
+#define MY_SHELL_2_1
 
 #include <stdio.h>
 #include <unistd.h>
