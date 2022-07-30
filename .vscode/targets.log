@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 26 22:25:53 2022
+# Make data base, printed on Sat Jul 30 23:16:17 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 37)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.566
+I3SOCK = /run/user/1000/i3/ipc-socket.590
 # makefile (from 'Makefile', line 36)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-de6bbbbc-dd60-4573-a07d-9e5d6f5b487a.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bb47396c-3f11-4dc8-bd1f-edb980f08ddf.sock
 # makefile (from 'Makefile', line 30)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -91,13 +91,13 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 677
+VSCODE_PID = 734
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from 'Makefile', line 16)
-FLAGS = -Wall --pedantic
+FLAGS = -Wall --pedantic -g
 # automatic
 *F = $(notdir $*)
 # environment
@@ -119,7 +119,7 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 4
+SHLVL = 3
 # makefile (from 'Makefile', line 33)
 SRCCFILES = $(foreach D, $(CSOURCE), $(wildcard $(D)/*.c)) 
 # environment
@@ -127,7 +127,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/user_me/Sys_Builds/clion/bin/clion.sh
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/user_me/Sys_Builds/clion/bin/clion.sh:/home/user_me/.local/bin:/home/user_me/.local/bin
 # default
 MAKEFILES := 
 # environment
@@ -141,7 +141,7 @@ SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
 # makefile (from 'Makefile', line 41)
 MAIN = main
 # environment
-INVOCATION_ID = f292e41072e74be1ae2e36ade399449e
+INVOCATION_ID = aacad3e36ac6425da67de7e45f51acc2
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -163,7 +163,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_builtins.o
 # environment
-SYSTEMD_EXEC_PID = 445
+SYSTEMD_EXEC_PID = 463
 # makefile (from 'Makefile', line 24)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 # environment
@@ -217,7 +217,7 @@ CC = gcc
 # makefile (from 'Makefile', line 54)
 DYN_LIB_NAME = my_emulator
 # variable set hash-table stats:
-# Load=102/1024=10%, Rehash=0, Collisions=15/167=9%
+# Load=102/1024=10%, Rehash=0, Collisions=16/169=9%
 
 # Pattern-specific Variable Values
 
@@ -225,11 +225,11 @@ DYN_LIB_NAME = my_emulator
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 11 files, no impossibilities.
-# . (device 2084, inode 3547144): 11 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
+# . (device 2084, inode 3547144): 13 files, no impossibilities.
 # /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 8 files, no impossibilities.
 
-# 30 files, no impossibilities in 3 directories.
+# 34 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -245,6 +245,7 @@ run1: main.x
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 63):
+	xrdb -merge /home/user_me/.Xresources
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	xterm -e ./$(EXEC)) 
 
@@ -269,7 +270,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-24 23:14:04.244492434
+#  Last modified 2022-07-28 22:58:30.616677052
 #  File has been updated.
 #  Successfully updated.
 
@@ -279,14 +280,14 @@ main.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_b
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 60):
 	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
- 
 
 clean:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 68):
+#  recipe to execute (from 'Makefile', line 73):
 	rm -f ./*.o ./lib/*.o
 
 # Not a target:
@@ -321,6 +322,14 @@ all:
 #  recipe to execute (from 'Makefile', line 49):
 	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
+test: main.x
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 68):
+	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
+	 gdb $(EXEC)) 
+
 # Not a target:
 %.o:
 #  Precious file (prerequisite of .PRECIOUS).
@@ -351,7 +360,7 @@ everything: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 71):
+#  recipe to execute (from 'Makefile', line 76):
 	rm ./*.x
 	rm ./include/*.so
 
@@ -362,19 +371,19 @@ everything: clean
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=19/1024=2%, Rehash=0, Collisions=0/45=0%
+# Load=20/1024=2%, Rehash=0, Collisions=0/47=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 700 B / avg = 17 B
-# current buf: size = 8162 B / used = 700 B / count = 40 / avg = 17 B
+# strcache buffers: 1 (0) / strings = 43 / storage = 725 B / avg = 16 B
+# current buf: size = 8162 B / used = 725 B / count = 43 / avg = 16 B
 
-# strcache performance: lookups = 67 / hit rate = 40%
+# strcache performance: lookups = 72 / hit rate = 40%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=0/67=0%
-# Finished Make data base on Tue Jul 26 22:25:53 2022
+# Load=43/8192=1%, Rehash=0, Collisions=0/72=0%
+# Finished Make data base on Sat Jul 30 23:16:17 2022
 
  

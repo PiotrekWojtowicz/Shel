@@ -14,8 +14,6 @@
     "EOF"
 };
 
-static const char *xterm_query = "xrdb -merge ~/.Xresources";
-
 static Builtin_Info Builtin_Info_[ARRAY_LEN(builtins, char*)];
 
 /*
@@ -24,6 +22,9 @@ static Builtin_Info Builtin_Info_[ARRAY_LEN(builtins, char*)];
 
 void Initialize_Built_Ins(void){
     //Initialize builitins struct
+    //
+    //   New idea - fetch the text from a file.
+    //
         Builtin_Info_[CD].command = "\033[00;41;5m * cd * \033[00;00m\n"; // CD builtin
         Builtin_Info_[CD].description = "Implementation of popular change directory - should work like the original one\n";
 
@@ -34,7 +35,7 @@ void Initialize_Built_Ins(void){
         Builtin_Info_[SETCOL].description = "Fetches the colors from the xterm ~/.Xresources. To set your custom colors edit the ~/.Xresources\n";
 
        Builtin_Info_[EXIT].command = "\033[00;41;5m * exit * \033[00;00m\n"; //exit builtin
-       Builtin_Info_[EXIT].description = "Used to exit the shell\n";
+       Builtin_Info_[EXIT].description = "Used to exit the shell\nUse the -f option to FORCE exit\n";
 }
 
 int Find_Built_Command(COMMAND_STRING_ argv) PERF_IMPRV{
@@ -43,8 +44,9 @@ int Find_Built_Command(COMMAND_STRING_ argv) PERF_IMPRV{
     //Possible bottlneck
     int command_count = ARRAY_LEN(builtins, char*);
     for( int i = 0; i < command_count; i++){
-        if(!strcmp(argv[0], builtins[i]))
+        if(!strcmp(argv[0], builtins[i])){
             return 1;
+        }
     }
     return -1;
 }
@@ -66,13 +68,19 @@ int Execute_Built_In(COMMAND_STRING_ argv){
     }
     else if(!strcmp(argv[0], builtins[2])){
         //Run the exit command
-        if(Command_Exit() == 0)
+        if(Command_Exit(argv) == 0)
             return 0;
     }
     return 1;
 }
 
 int Command_Cd(INPUT_CH_ARR_ directory){
+        //if no dir just skip
+        if(directory == NULL){
+            Console_Write("\033[00;41mNo directory specified\n\033[00;00m", "Cd Write error");
+            return -1;
+        }
+
         if(!strcmp(directory,(char*)"~")){
             char *temp = NULL;
             if((temp = getlogin()) == NULL){
@@ -127,15 +135,18 @@ int Command_Help(void){
         return 0;
 }
 
-int Command_Exit(void){
+int Command_Exit(COMMAND_STRING_ argv){
+    //Force
+    if(argv[1] == "-f"){
+        _exit(EXIT_FAILURE);
+    }
     //Exit command wraper
     //Check if any kids exist if so then dont exit
     int temp_status;
     if(waitpid(-1, temp_status, WNOHANG | WUNTRACED) == 0){
-        Console_Write("Cannot close\nChild proccess in progress\n", "Exit Write error");
+        Console_Write("Cannot close\nChild proccess in progress\nSee the -f option\n", "Exit Write error");
         return 0;
     }
     else
         exit(EXIT_SUCCESS);
 }
-
