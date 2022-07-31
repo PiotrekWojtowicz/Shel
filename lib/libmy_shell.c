@@ -14,7 +14,8 @@ int Parseline(INPUT_CH_ARR_ buf, COMMAND_STRING_ argv){
     }
     //!
     //What we are doing here is me get rid of the '\n' char
-    buf[strlen(buf)-1] = ' ';
+    buf[strlen(buf)] = ' ';
+
     while(*buf && (*buf == ' ')) // <--- ignore leading blank spaces inside the command
         buf++; 
 
@@ -100,8 +101,9 @@ void Initalize_Shell(){
     Console_Write("Welcome back v.2.1\n", "Shell Write Error");
 
     do{
+        //Readline wraper
+        char* ptr = rl_gets();
         memset(input, '\0', MAXLINE);
-        Console_Write("\033[30;47;5mshell$\033[0;0m ", "Shell Write Error");
-        Console_Read(input, "Shell Read Error");
+        strcpy(input, ptr);
     } while(Eval(input));
 }

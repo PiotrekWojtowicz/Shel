@@ -14,7 +14,9 @@
         "xcb.h": "c",
         "uio.h": "c",
         "pthread.h": "c",
-        "libmy_builtins.h": "c"
+        "libmy_builtins.h": "c",
+        "readline.h": "c",
+        "curses.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
