@@ -15,12 +15,12 @@ To <b>install</b> and run use the following command:
 
 Shel is aimed to be as user-friendly as possible. It should behave almost exactly the same as <b>bash</b>. Note that Shel still does not support:
 
-<ul style="color:red;">
-<li>Scripting</li>
-<li>I/O Redirection</li>
-<li style="color:green;">Tab Autocomplete</li>
-<li style="color:green;">Command History</li>
-<li style="color:green;">Arrow input</li>
+<ul>
+<li> - Scripting</li>
+<li> - I/O Redirection</li>
+<li> + Tab Autocomplete</li>
+<li> + Command History</li>
+<li> + Arrow input</li>
 </ul>
 
 ## Builtins
