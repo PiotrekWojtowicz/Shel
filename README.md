@@ -15,6 +15,7 @@ To <b>install</b> and run use the following command:
 
 Shel is aimed to be as user-friendly as possible. It should behave almost exactly the same as <b>bash</b>. Note that Shel still does not support:
 
+```diff
 <ul>
 <li> - Scripting</li>
 <li> - I/O Redirection</li>
@@ -22,6 +23,7 @@ Shel is aimed to be as user-friendly as possible. It should behave almost exactl
 <li> + Command History</li>
 <li> + Arrow input</li>
 </ul>
+```
 
 ## Builtins
 
