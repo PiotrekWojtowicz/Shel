@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 19:32:29 2022
+# Make data base, printed on Sun Jul 31 20:43:25 2022
 
 # Variables
 
@@ -233,15 +233,16 @@ DYN_LIB_NAME = my_emulator
 
 # Pattern-specific Variable Values
 
+ 
 # No pattern-specific variable values.
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 15 files, no impossibilities.
-# . (device 2084, inode 3547144): 15 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 14 files, no impossibilities.
+# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
+# . (device 2084, inode 3547144): 13 files, no impossibilities.
+# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 10 files, no impossibilities.
 
-# 44 files, no impossibilities in 3 directories.
+# 36 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -251,15 +252,6 @@ DYN_LIB_NAME = my_emulator
 
 # 1 implicit rules, 0 (0.0%) terminal.
 # Files
-
-run1: main.x
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 63):
-	xrdb -merge /home/user_me/.Xresources
-	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
-	xterm -e ./$(EXEC)) 
 
 /home/user_me/CodeProjects/lib/libmy_handlers.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_movement.c /home/user_me/CodeProjects/lib/libmy_shell.c
 #  Implicit rule search has not been done.
@@ -282,8 +274,7 @@ run1: main.x
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-07-31 19:19:20.210286909
+#  Last modified 2022-07-31 20:43:24.183798022
 #  File has been updated.
 #  Successfully updated.
 
@@ -323,6 +314,7 @@ clean:
 
 # Not a target:
 .DEFAULT:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -333,6 +325,15 @@ all:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
+
+run: main.x
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 63):
+	xrdb -merge /home/user_me/.Xresources
+	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
+	xterm -e ./$(EXEC)) 
 
 /home/user_me/CodeProjects/lib/libmy_builtins.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_movement.c /home/user_me/CodeProjects/lib/libmy_shell.c
 #  Implicit rule search has not been done.
@@ -380,6 +381,7 @@ test: main.x
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 everything: clean
 #  Implicit rule search has not been done.
@@ -403,12 +405,12 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 52 / storage = 927 B / avg = 17 B
-# current buf: size = 8162 B / used = 927 B / count = 52 / avg = 17 B
+# strcache buffers: 1 (0) / strings = 47 / storage = 854 B / avg = 18 B
+# current buf: size = 8162 B / used = 854 B / count = 47 / avg = 18 B
 
-# strcache performance: lookups = 85 / hit rate = 38%
+# strcache performance: lookups = 79 / hit rate = 40%
 # hash-table stats:
-# Load=52/8192=1%, Rehash=0, Collisions=0/85=0%
-# Finished Make data base on Sun Jul 31 19:32:29 2022
+# Load=47/8192=1%, Rehash=0, Collisions=0/79=0%
+# Finished Make data base on Sun Jul 31 20:43:25 2022
 
  
