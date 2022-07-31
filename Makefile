@@ -13,7 +13,7 @@ CC = gcc
 LD = $(CC)
 
 #Compilation flags
-FLAGS = -Wall --pedantic -g
+FLAGS = -Wall --pedantic -g -lncurses -lreadline
 INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 DFLAGS = -fPIC
 

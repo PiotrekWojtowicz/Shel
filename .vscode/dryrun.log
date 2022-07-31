@@ -1,5 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/user_me/CodeProjects'
-gcc -Wall --pedantic -g -fPIC -c -o /home/user_me/CodeProjects/lib/libmy_builtins.o  /home/user_me/CodeProjects/lib/libmy_builtins.c
+make: '/home/user_me/CodeProjects/lib/libmy_builtins.o' is up to date.
 make: Leaving directory '/home/user_me/CodeProjects'
  

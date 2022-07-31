@@ -40,6 +40,7 @@
 //else include my_hanlder header
 #include "libmy_handlers.h"
 #include "libmy_builtins.h"
+#include "libmy_movement.h"
 
 //Shell functions 
 extern void Initalize_Shell();
