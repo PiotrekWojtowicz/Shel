@@ -18,6 +18,7 @@ Shel is aimed to be as user-friendly as possible. It should behave almost exactl
 ```diff
 - Scripting
 - I/O Redirection
+- Background command execution
 + Tab Autocomplete
 + Command History
 + Arrow input
