@@ -5,7 +5,7 @@ It's based on well known <b>bash</b> shell.
 
 ## Install
 
-Make sure to check all the dependecies (listed below). So far there is user-friendly installation module. (Python script is in progress..)
+Make sure to check all the dependecies (listed below). So far there is <b>no</b> user-friendly installation module. (Python script is in progress..)
 
 To <b>install</b> and run use the following command:
 
