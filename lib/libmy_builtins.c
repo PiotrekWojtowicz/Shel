@@ -107,7 +107,7 @@ void Soft_Wrap(INPUT_CH_ARR_ description)PERF_IMPRV{
     int screen_width = strlen(description);
     int wraps = screen_width/COLUMN_SIZE;
     INPUT_CH_ARR_ store_temp[COLUMN_SIZE];
-    memset(store_temp, '\0', COLUMN_SIZE);
+    memset(store_temp, '\0', (COLUMN_SIZE*sizeof(char *)));
     //Go throught all break points and display them
     for(int i = 0; i < wraps; i++){
         //If somehow last line
@@ -119,7 +119,7 @@ void Soft_Wrap(INPUT_CH_ARR_ description)PERF_IMPRV{
     }
     //at the end dont forget the last line
     //flush the memory
-    memset(store_temp, '\0', COLUMN_SIZE);
+    memset(store_temp, '\0',(COLUMN_SIZE*sizeof(char *)));
     //fill with remaining line
     int temp = (screen_width-(wraps*COLUMN_SIZE));
     memcpy(store_temp, (description+(wraps*COLUMN_SIZE)),temp);
@@ -142,8 +142,7 @@ int Command_Exit(COMMAND_STRING_ argv){
     }
     //Exit command wraper
     //Check if any kids exist if so then dont exit
-    int temp_status;
-    if(waitpid(-1, temp_status, WNOHANG | WUNTRACED) == 0){
+    if(waitpid(-1, NULL, WNOHANG | WUNTRACED) == 0){
         Console_Write("Cannot close\nChild proccess in progress\nSee the -f option\n", "Exit Write error");
         return 0;
     }
