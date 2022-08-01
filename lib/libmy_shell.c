@@ -59,8 +59,9 @@ int Builtin_Command(COMMAND_STRING_ argv){
 
 int Eval(INPUT_CH_ARR_ cmdline){
 
-    //So the compilers happy
     char* command[MAXLINE];
+    //For safety reasons
+    memset(command, '\0', MAXLINE);
     //For the modified cmdline
     char buf[MAXLINE];
     int is_background = 0;

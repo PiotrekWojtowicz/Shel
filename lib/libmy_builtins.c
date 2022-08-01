@@ -137,7 +137,8 @@ int Command_Help(void){
 
 int Command_Exit(COMMAND_STRING_ argv){
     //Force
-    if(argv[1] == "-f"){
+    if(argv[1]!=NULL)//check if exists
+    if(!strcmp(argv[1], "-f")){
         _exit(EXIT_FAILURE);
     }
     //Exit command wraper
