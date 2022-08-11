@@ -18,6 +18,7 @@ Shel is aimed to be as user-friendly as possible. It should behave almost exactl
 ```diff
 - Scripting
 - I/O Redirection
++ Background command execution
 + Tab Autocomplete
 + Command History
 + Arrow input
@@ -34,3 +35,15 @@ So far there are just couple of builtins, you can check them by running the comm
 The project is aimed to be as <i>extra</i> dependecies free as possible. Most of commonly used linux distributions (btw i use arch) should already be equiped with these dependecies.
 
 <img src="https://img.shields.io/badge/Xterm-372-lightgrey?style=for-the-badge&logo=appveyor"> <img src="https://img.shields.io/badge/Readline-8.1-lightgrey?style=for-the-badge&logo=appveyor"> <img src="https://img.shields.io/badge/GNU make-4.3-lightgrey?style=for-the-badge&logo=appveyor">
+
+### GNU Readline Library
+
+The readline library is commonly used among variety of shells. At first glance it might look lazy not to use linux sys calls (which appear commonly in the program) however, only the <i>input-interaction</i> is provided by the GNU Readline Library.
+
+<hr>
+
+## Gallery <br>
+
+<a href="https://imgur.com/mOaRscX"><img src="https://i.imgur.com/mOaRscX.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/qXH2gEl"><img src="https://i.imgur.com/qXH2gEl.png" title="source: imgur.com" /></a>
+<hr>

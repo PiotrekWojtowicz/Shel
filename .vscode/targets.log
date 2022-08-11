@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 20:43:25 2022
+# Make data base, printed on Thu Aug 11 19:37:09 2022
 
 # Variables
 
@@ -18,26 +18,26 @@ GDK_BACKEND = x11
 LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
-# makefile (from 'Makefile', line 37)
+# makefile (from 'Makefile', line 35)
 LIBOFILES = $(patsubst %.c, %.o, $(LIBCFILES))
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.648
-# makefile (from 'Makefile', line 36)
+OSH = /home/user_me/.oh-my-bash
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.650
+# makefile (from 'Makefile', line 34)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ea18d478-757e-40b4-9fca-4bb7992a497f.sock
-# makefile (from 'Makefile', line 30)
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8e3beeb5-b70a-435d-87a1-6e80cf118752.sock
+# makefile (from 'Makefile', line 28)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
 VSCODE_CWD = /home/user_me
 # environment
-WINDOWID = 37748747
-# environment
 WINDOWPATH = 1
-# makefile (from 'Makefile', line 21)
-WHEREAMI = ~/CodeProjects
-# makefile (from 'Makefile', line 27)
-FULLINCLUDEPATH = /home/user_me/CodeProjects/include
+# makefile (from 'Makefile', line 19)
+WHEREAMI = ~/_Done_Projects/Shel
+# makefile (from 'Makefile', line 25)
+FULLINCLUDEPATH = /home/user_me/_Done_Projects/Shel/include
 # default
 MAKE_COMMAND := make
 # automatic
@@ -47,9 +47,11 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/user_me/CodeProjects
+PWD = /home/user_me/_Done_Projects/Shel
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
+# environment
+LSCOLORS = Gxfxcxdxdxegedabagacad
 # environment
 MAIL = /var/spool/mail/user_me
 # automatic
@@ -70,10 +72,10 @@ XAUTHORITY = /home/user_me/.Xauthority
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # makefile
 MAKEFLAGS = pqrR
-# makefile (from 'Makefile', line 23)
+# makefile (from 'Makefile', line 21)
 LIBSOURCE = $(WHEREAMI)/lib
 # makefile
-CURDIR := /home/user_me/CodeProjects
+CURDIR := /home/user_me/_Done_Projects/Shel
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -84,6 +86,8 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 MFLAGS = -pqrR
 # default
 .SHELLFLAGS := -c
+# environment
+HISTSIZE = 
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # makefile (from 'Makefile', line 1)
@@ -93,12 +97,14 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4666
+VSCODE_PID = 20759
+# environment
+HISTIGNORE = &:[ ]*:exit:ls:bg:fg:history:clear
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 16)
+# makefile (from 'Makefile', line 14)
 FLAGS = -Wall --pedantic -g -lncurses -lreadline
 # automatic
 *F = $(notdir $*)
@@ -108,11 +114,13 @@ CHROME_DESKTOP = code-url-handler.desktop
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
-# makefile (from 'Makefile', line 42)
+# makefile (from 'Makefile', line 40)
 EXEC = $(MAIN).x
 # environment
 VSCODE_NLS_CONFIG = {"locale":"pl","availableLanguages":{"*":"pl"},"_languagePackId":"993a25eb46a7e0a4aef446c1661beda3.pl","_translationsConfigFile":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl/tcf.json","_cacheRoot":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl","_resolvedLanguagePackCoreLocation":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/home/user_me/.config/Code/clp/993a25eb46a7e0a4aef446c1661beda3.pl/corrupted.info","_languagePackSupport":true}
-# makefile (from 'Makefile', line 25)
+# environment
+HISTFILESIZE = 
+# makefile (from 'Makefile', line 23)
 INCLUDE = $(WHEREAMI)/include
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
@@ -121,78 +129,80 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 4
-# environment
-TERMINFO = /usr/lib/kitty/terminfo
-# makefile (from 'Makefile', line 33)
+SHLVL = 3
+# makefile (from 'Makefile', line 31)
 SRCCFILES = $(foreach D, $(CSOURCE), $(wildcard $(D)/*.c)) 
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/user_me/Sys_Builds/clion/bin/clion.sh:/home/user_me/.local/bin:/home/user_me/.local/bin:/home/user_me/Sys_Builds/clion/bin/clion.sh:/home/user_me/.local/bin
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/user_me/.local/bin
 # default
 MAKEFILES := 
 # environment
 MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
-# makefile (from 'Makefile', line 17)
+# makefile (from 'Makefile', line 15)
 INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
-# makefile (from 'Makefile', line 38)
+# makefile (from 'Makefile', line 36)
 SRCOFILES = $(patsubst %.c, %.o, $(SRCCFILES))
-# makefile (from 'Makefile', line 41)
+# makefile (from 'Makefile', line 39)
 MAIN = main
 # environment
-INVOCATION_ID = af9aa8f3a0e64ff18e0308c55dbb1143
+INVOCATION_ID = 82ff87cc29b64bc29f255e70a7108749
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?F = $(notdir $?)
 # environment
 XDG_SEAT = seat0
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
 # automatic
 +F = $(notdir $+)
+# environment
+LESS = -R
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = user_me
-# makefile (from 'Makefile', line 32)
+# makefile (from 'Makefile', line 30)
 LIBCFILES = $(foreach D, $(LIBSOURCE), $(wildcard $(D)/*.c))
 # environment
 XDG_VTNR = 1
 # makefile
-.DEFAULT_GOAL := /home/user_me/CodeProjects/lib/libmy_builtins.o
+.DEFAULT_GOAL := /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.o
 # environment
-SYSTEMD_EXEC_PID = 459
-# makefile (from 'Makefile', line 24)
+SYSTEMD_EXEC_PID = 467
+# makefile (from 'Makefile', line 22)
 SOURCE = $(CSOURCE) $(LIBSOURCE)
-# environment
-KITTY_WINDOW_ID = 1
 # environment
 DISPLAY = :0
 # environment
 USER = user_me
 # default
 MAKE_VERSION := 4.3
-# makefile (from 'Makefile', line 53)
+# makefile (from 'Makefile', line 51)
 DYN_LIB = libmy_emulator.so
 # environment
-KITTY_PID = 4383
+DEBUGINFOD_URLS = https://debuginfod.archlinux.org 
+# environment
+PAGER = less
 # environment
 _ = /usr/bin/make
-# makefile (from 'Makefile', line 26)
+# makefile (from 'Makefile', line 24)
 BIN = $(WHEREAMI)/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
-# environment
-COLORTERM = truecolor
-# makefile (from 'Makefile', line 22)
+# makefile (from 'Makefile', line 20)
 CSOURCE = $(WHEREAMI)
-# makefile (from 'Makefile', line 18)
+# environment
+LC_CTYPE = pl_PL.UTF-8
+# makefile (from 'Makefile', line 16)
 DFLAGS = -fPIC
 # environment
 XDG_SESSION_CLASS = user
@@ -205,7 +215,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1829fa86-1.68.1-main.sock
 # environment
-TERM = xterm-kitty
+TERM = linux
 # environment
 XDG_SESSION_ID = 1
 # default
@@ -214,7 +224,7 @@ XDG_SESSION_ID = 1
 <F = $(notdir $<)
 # default
 SUFFIXES := 
-# makefile (from 'Makefile', line 13)
+# makefile (from 'Makefile', line 11)
 LD = $(CC)
 # environment
 VSCODE_CLI = 1
@@ -222,49 +232,33 @@ VSCODE_CLI = 1
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
-# makefile (from 'Makefile', line 12)
+# makefile (from 'Makefile', line 10)
 CC = gcc
-# environment
-KITTY_INSTALLATION_DIR = /usr/lib/kitty
-# makefile (from 'Makefile', line 54)
+# makefile (from 'Makefile', line 52)
 DYN_LIB_NAME = my_emulator
 # variable set hash-table stats:
-# Load=108/1024=11%, Rehash=0, Collisions=16/175=9%
+# Load=112/1024=11%, Rehash=0, Collisions=21/179=12%
 
 # Pattern-specific Variable Values
 
- 
 # No pattern-specific variable values.
 
 # Directories
 
-# /home/user_me/CodeProjects (device 2084, inode 3547144): 13 files, no impossibilities.
-# . (device 2084, inode 3547144): 13 files, no impossibilities.
-# /home/user_me/CodeProjects/lib (device 2084, inode 3673964): 10 files, no impossibilities.
+# /home/user_me/_Done_Projects/Shel/lib (device 2084, inode 3673964): 14 files, no impossibilities.
+# . (device 2084, inode 3547144): 15 files, no impossibilities.
+# /home/user_me/_Done_Projects/Shel (device 2084, inode 3547144): 15 files, no impossibilities.
 
-# 36 files, no impossibilities in 3 directories.
+# 44 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  recipe to execute (from 'Makefile', line 46):
+#  recipe to execute (from 'Makefile', line 44):
 	$(CC) $(FLAGS) $(INCFLAG) -c -o $@ $<
 
 # 1 implicit rules, 0 (0.0%) terminal.
 # Files
-
-/home/user_me/CodeProjects/lib/libmy_handlers.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_movement.c /home/user_me/CodeProjects/lib/libmy_shell.c
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
-	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
-
-# Not a target:
-/home/user_me/CodeProjects/lib/libmy_handlers.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 .PRECIOUS: %.o
 #  Implicit rule search has not been done.
@@ -274,47 +268,60 @@ DYN_LIB_NAME = my_emulator
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-31 20:43:24.183798022
+#  Last modified 2022-08-11 19:30:05.7198349
 #  File has been updated.
 #  Successfully updated.
 
-main.x: /home/user_me/CodeProjects/main.o /home/user_me/CodeProjects/lib/libmy_builtins.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_movement.o /home/user_me/CodeProjects/lib/libmy_shell.o /home/user_me/CodeProjects/include/libmy_emulator.so
+main.x: /home/user_me/_Done_Projects/Shel/main.o /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.o /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.o /home/user_me/_Done_Projects/Shel/lib/libmy_movement.o /home/user_me/_Done_Projects/Shel/lib/libmy_shell.o /home/user_me/_Done_Projects/Shel/include/libmy_emulator.so
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 60):
+#  recipe to execute (from 'Makefile', line 58):
 	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
+
+# Not a target:
+/home/user_me/_Done_Projects/Shel/lib/libmy_shell.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 73):
+#  recipe to execute (from 'Makefile', line 71):
 	rm -f ./*.o ./lib/*.o
 
-/home/user_me/CodeProjects/lib/libmy_movement.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_movement.c /home/user_me/CodeProjects/lib/libmy_shell.c
+/home/user_me/_Done_Projects/Shel/include/libmy_emulator.so: /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.o /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.o /home/user_me/_Done_Projects/Shel/lib/libmy_movement.o /home/user_me/_Done_Projects/Shel/lib/libmy_shell.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
+#  recipe to execute (from 'Makefile', line 55):
+	$(LD) -shared -o $@ $^
+
+# Not a target:
+/home/user_me/_Done_Projects/Shel/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/home/user_me/_Done_Projects/Shel/lib/libmy_builtins.o: /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.c /home/user_me/_Done_Projects/Shel/lib/libmy_movement.c /home/user_me/_Done_Projects/Shel/lib/libmy_shell.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
+
+/home/user_me/_Done_Projects/Shel/lib/libmy_handlers.o: /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.c /home/user_me/_Done_Projects/Shel/lib/libmy_movement.c /home/user_me/_Done_Projects/Shel/lib/libmy_shell.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
 	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
 # Not a target:
-/home/user_me/CodeProjects/main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/home/user_me/CodeProjects/lib/libmy_shell.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 .DEFAULT:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -330,25 +337,33 @@ run: main.x
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 63):
+#  recipe to execute (from 'Makefile', line 61):
 	xrdb -merge /home/user_me/.Xresources
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	xterm -e ./$(EXEC)) 
-
-/home/user_me/CodeProjects/lib/libmy_builtins.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_movement.c /home/user_me/CodeProjects/lib/libmy_shell.c
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
-	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
 test: main.x
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 68):
+#  recipe to execute (from 'Makefile', line 66):
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	 gdb $(EXEC)) 
+
+/home/user_me/_Done_Projects/Shel/lib/libmy_shell.o: /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.c /home/user_me/_Done_Projects/Shel/lib/libmy_movement.c /home/user_me/_Done_Projects/Shel/lib/libmy_shell.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
+ 
+
+/home/user_me/_Done_Projects/Shel/lib/libmy_movement.o: /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.c /home/user_me/_Done_Projects/Shel/lib/libmy_movement.c /home/user_me/_Done_Projects/Shel/lib/libmy_shell.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
 # Not a target:
 %.o:
@@ -357,42 +372,33 @@ test: main.x
 #  Modification time never checked.
 #  File has not been updated.
 
-/home/user_me/CodeProjects/lib/libmy_shell.o: /home/user_me/CodeProjects/lib/libmy_builtins.c /home/user_me/CodeProjects/lib/libmy_handlers.c /home/user_me/CodeProjects/lib/libmy_movement.c /home/user_me/CodeProjects/lib/libmy_shell.c
+# Not a target:
+/home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
-	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
 
-/home/user_me/CodeProjects/include/libmy_emulator.so: /home/user_me/CodeProjects/lib/libmy_builtins.o /home/user_me/CodeProjects/lib/libmy_handlers.o /home/user_me/CodeProjects/lib/libmy_movement.o /home/user_me/CodeProjects/lib/libmy_shell.o
+# Not a target:
+/home/user_me/_Done_Projects/Shel/lib/libmy_handlers.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 57):
-	$(LD) -shared -o $@ $^
 
 .PHONY: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-/home/user_me/CodeProjects/lib/libmy_movement.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
- 
-
 everything: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 76):
+#  recipe to execute (from 'Makefile', line 74):
 	rm ./*.x
 	rm ./include/*.so
 
 # Not a target:
-/home/user_me/CodeProjects/lib/libmy_builtins.c:
+/home/user_me/_Done_Projects/Shel/lib/libmy_movement.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -405,12 +411,12 @@ everything: clean
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 47 / storage = 854 B / avg = 18 B
-# current buf: size = 8162 B / used = 854 B / count = 47 / avg = 18 B
+# strcache buffers: 1 (0) / strings = 52 / storage = 1010 B / avg = 19 B
+# current buf: size = 8162 B / used = 1010 B / count = 52 / avg = 19 B
 
-# strcache performance: lookups = 79 / hit rate = 40%
+# strcache performance: lookups = 85 / hit rate = 38%
 # hash-table stats:
-# Load=47/8192=1%, Rehash=0, Collisions=0/79=0%
-# Finished Make data base on Sun Jul 31 20:43:25 2022
+# Load=52/8192=1%, Rehash=0, Collisions=0/85=0%
+# Finished Make data base on Thu Aug 11 19:37:09 2022
 
  

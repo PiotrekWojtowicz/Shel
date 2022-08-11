@@ -59,8 +59,9 @@ int Builtin_Command(COMMAND_STRING_ argv){
 
 int Eval(INPUT_CH_ARR_ cmdline){
 
-    //So the compilers happy
     char* command[MAXLINE];
+    //For safety reasons
+    memset(command, '\0', MAXLINE);
     //For the modified cmdline
     char buf[MAXLINE];
     int is_background = 0;
@@ -104,6 +105,10 @@ void Initalize_Shell(){
         //Readline wraper
         char* ptr = rl_gets();
         memset(input, '\0', MAXLINE);
+        //why we copy data from ptr to input?
         strcpy(input, ptr);
+        /*
+            ptr is pointing at dynamically allocated memory, hence we copy this string into our 'stac' array that way we maintain high memory safety standard 
+        */
     } while(Eval(input));
 }
