@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/user_me/CodeProjects'
-gcc -Wall --pedantic -g -lncurses -lreadline -fPIC -c -o /home/user_me/CodeProjects/lib/libmy_builtins.o  /home/user_me/CodeProjects/lib/libmy_builtins.c
-make: Leaving directory '/home/user_me/CodeProjects'
+make: Entering directory '/home/user_me/_Done_Projects/Shel'
+gcc -Wall --pedantic -g -lncurses -lreadline -fPIC -c -o /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.o  /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c
+make: Leaving directory '/home/user_me/_Done_Projects/Shel'
  

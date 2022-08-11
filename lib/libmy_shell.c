@@ -105,6 +105,10 @@ void Initalize_Shell(){
         //Readline wraper
         char* ptr = rl_gets();
         memset(input, '\0', MAXLINE);
+        //why we copy data from ptr to input?
         strcpy(input, ptr);
+        /*
+            ptr is pointing at dynamically allocated memory, hence we copy this string into our 'stac' array that way we maintain high memory safety standard 
+        */
     } while(Eval(input));
 }

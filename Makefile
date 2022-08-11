@@ -6,9 +6,7 @@
 #
 
 #Save the object files
-.PRECIOUS: %.o
-
-#Linker and compiler //both gcc
+.PRECIOUS: %.o #Linker and compiler //both gcc
 CC = gcc
 LD = $(CC)
 
@@ -18,13 +16,13 @@ INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 DFLAGS = -fPIC
 
 #Locals
-WHEREAMI = ~/CodeProjects
+WHEREAMI = ~/_Done_Projects/Shel
 CSOURCE = $(WHEREAMI)
 LIBSOURCE = $(WHEREAMI)/lib
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 INCLUDE = $(WHEREAMI)/include
 BIN = $(WHEREAMI)/bin
-FULLINCLUDEPATH = /home/user_me/CodeProjects/include
+FULLINCLUDEPATH = /home/user_me/_Done_Projects/Shel/include
 
 #Wildcards for source files
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
