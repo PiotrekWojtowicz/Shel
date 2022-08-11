@@ -44,7 +44,6 @@ The readline library is commonly used among variety of shells. At first glance i
 
 ## Gallery <br>
 
-<hr>
 <a href="https://imgur.com/mOaRscX"><img src="https://i.imgur.com/mOaRscX.png" title="source: imgur.com" /></a>
 <a href="https://imgur.com/qXH2gEl"><img src="https://i.imgur.com/qXH2gEl.png" title="source: imgur.com" /></a>
 <hr>
