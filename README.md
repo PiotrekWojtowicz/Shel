@@ -41,5 +41,10 @@ The project is aimed to be as <i>extra</i> dependecies free as possible. Most of
 The readline library is commonly used among variety of shells. At first glance it might look lazy not to use linux sys calls (which appear commonly in the program) however, only the <i>input-interaction</i> is provided by the GNU Readline Library.
 
 <hr>
+
+## Gallery <br>
+
+<hr>
 <a href="https://imgur.com/mOaRscX"><img src="https://i.imgur.com/mOaRscX.png" title="source: imgur.com" /></a>
 <a href="https://imgur.com/qXH2gEl"><img src="https://i.imgur.com/qXH2gEl.png" title="source: imgur.com" /></a>
+<hr>
