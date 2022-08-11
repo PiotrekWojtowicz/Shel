@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 11 19:34:15 2022
+# Make data base, printed on Thu Aug 11 19:37:09 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ I3SOCK = /run/user/1000/i3/ipc-socket.650
 # makefile (from 'Makefile', line 34)
 OFILES = $(patsubst %.c, %.o, $(CFILES))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a8798d1b-9d0a-405a-ab6d-20ffa06ae7ff.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8e3beeb5-b70a-435d-87a1-6e80cf118752.sock
 # makefile (from 'Makefile', line 28)
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 19892
+VSCODE_PID = 20759
 # environment
 HISTIGNORE = &:[ ]*:exit:ls:bg:fg:history:clear
 # environment
@@ -275,7 +275,6 @@ Makefile:
 main.x: /home/user_me/_Done_Projects/Shel/main.o /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.o /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.o /home/user_me/_Done_Projects/Shel/lib/libmy_movement.o /home/user_me/_Done_Projects/Shel/lib/libmy_shell.o /home/user_me/_Done_Projects/Shel/include/libmy_emulator.so
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 58):
 	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
@@ -357,6 +356,7 @@ test: main.x
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 47):
 	$(CC) $(FLAGS) $(DFLAGS) -c -o $@ $(patsubst %.o, %.c, $@)
+ 
 
 /home/user_me/_Done_Projects/Shel/lib/libmy_movement.o: /home/user_me/_Done_Projects/Shel/lib/libmy_builtins.c /home/user_me/_Done_Projects/Shel/lib/libmy_handlers.c /home/user_me/_Done_Projects/Shel/lib/libmy_movement.c /home/user_me/_Done_Projects/Shel/lib/libmy_shell.c
 #  Implicit rule search has not been done.
@@ -417,6 +417,6 @@ everything: clean
 # strcache performance: lookups = 85 / hit rate = 38%
 # hash-table stats:
 # Load=52/8192=1%, Rehash=0, Collisions=0/85=0%
-# Finished Make data base on Thu Aug 11 19:34:15 2022
+# Finished Make data base on Thu Aug 11 19:37:09 2022
 
  
