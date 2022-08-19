@@ -71,8 +71,16 @@ int Execute_Built_In(COMMAND_STRING_ argv){
         if(Command_Exit(argv) == 0)
             return 0;
     }
+   else if(!strcmp(argv[0], builtins[3])){
+	//Run set colors
+	if(Command_SetColors(argv) == 0){
+	    return 0;
+	}	
+   }
     return 1;
 }
+
+int Command_SetColors();
 
 int Command_Cd(INPUT_CH_ARR_ directory){
         //if no dir just skip
