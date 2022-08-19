@@ -16,13 +16,15 @@ INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 DFLAGS = -fPIC
 
 #Locals
-WHEREAMI = ~/_Done_Projects/Shel
+WHEREAMI = ~/Shel
+FULLINCLUDEPATH = /home/user/Shel/include
+XTERM = /home/user/.Xresources
+
 CSOURCE = $(WHEREAMI)
 LIBSOURCE = $(WHEREAMI)/lib
 SOURCE = $(CSOURCE) $(LIBSOURCE)
 INCLUDE = $(WHEREAMI)/include
 BIN = $(WHEREAMI)/bin
-FULLINCLUDEPATH = /home/user_me/_Done_Projects/Shel/include
 
 #Wildcards for source files
 CFILES = $(foreach D, $(SOURCE), $(wildcard $(D)/*.c))
@@ -58,7 +60,7 @@ $(EXEC): $(OFILES) $(INCLUDE)/$(DYN_LIB)
 	$(LD) $(foreach D, $(SRCOFILES), $(D)) $(FLAGS) -lrt -L$(FULLINCLUDEPATH) -l$(DYN_LIB_NAME) -o $@ 
 
 run: $(EXEC)
-	xrdb -merge /home/user_me/.Xresources
+	xrdb -merge $(XTERM)
 	(export LD_LIBRARY_PATH+="$(FULLINCLUDEPATH)":${LD_LIBRARY_PATH}; \
 	xterm -e ./$(EXEC)) 
 

@@ -24,6 +24,7 @@ extern int Builtin_Command(COMMAND_STRING_ argv);
 extern int Command_Help(void);
 extern int Command_Cd(INPUT_CH_ARR_ directory);
 extern int Command_Exit(COMMAND_STRING_ argv);
+extern int Command_SetColors(COMMAND_STRING_ argv);
 //Exeption for end of file
 extern int Eof_Exeption(void);
 //Wraper created to quickly find a builtin
