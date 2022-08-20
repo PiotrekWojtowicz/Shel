@@ -34,11 +34,10 @@ So far there are just couple of builtins, you can check them by running the comm
 
 Tested fonts:
 
-```
+```diff
 + Monospace
 + Liberation
 + CascadiaCode
-
 ```
 
 ## Dependencies
