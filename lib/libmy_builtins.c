@@ -36,7 +36,7 @@ void Initialize_Built_Ins(void){
         Builtin_Info_[HELP].description = "Help command used to display information about builtin commands\n";
 
         Builtin_Info_[SETCOL].command = "\033[00;41;5m * setcolors * \033[00;00m\n"; //xterm color set
-        Builtin_Info_[SETCOL].description = "Fetches the colors from the xterm ~/.Xresources. To set your custom colors edit the ~/.Xresources\n";
+        Builtin_Info_[SETCOL].description = "Sets the font its size and background color. Requires three arguments:  \033[00;21m<FontName> <FontSize> <BackgroundColor>\033[00;00m\n";
 
        Builtin_Info_[EXIT].command = "\033[00;41;5m * exit * \033[00;00m\n"; //exit builtin
        Builtin_Info_[EXIT].description = "Used to exit the shell\nUse the -f option to FORCE exit\n";
@@ -101,7 +101,7 @@ int Command_SetColors(COMMAND_STRING_ argv){
     char temp_array[64];
     sprintf(temp_array, "xterm*faceName: %s\n", argv[1]);
 
-    if(write(file_desc, temp_array, (sizeof("xterm*faceName: ")+sizeof(argv[1]))+1) == -1){
+    if(write(file_desc, temp_array, (sizeof("xterm*faceName: ")+ARRAY_LEN(argv[1],char))+1) == -1){
         perror("Could not update Xresources");
 	exit(EXIT_FAILURE);
     }
@@ -109,7 +109,7 @@ int Command_SetColors(COMMAND_STRING_ argv){
     bzero(temp_array, 64);
     sprintf(temp_array, "xterm*faceSize: %s\n", argv[2]);
 
-    if(write(file_desc, temp_array, (sizeof("xterm*faceSize: ")+sizeof(argv[2]))+1) == -1){
+    if(write(file_desc, temp_array, (sizeof("xterm*faceSize: ")+ARRAY_LEN(argv[2],char*))+1) == -1){
         perror("Could not update Xresources");
 	exit(EXIT_FAILURE);
     }
@@ -117,7 +117,7 @@ int Command_SetColors(COMMAND_STRING_ argv){
     bzero(temp_array, 64);
     sprintf(temp_array, "xterm*background: %s\n", argv[3]);
 
-    if(write(file_desc, temp_array, (sizeof("xterm*background: ")+sizeof(argv[3]))+1) == -1){
+    if(write(file_desc, temp_array, (sizeof("xterm*background: ")+strlen(argv[3]))) == -1){
         perror("Could not update Xresources");
 	exit(EXIT_FAILURE);
     } 
@@ -157,7 +157,7 @@ void Soft_Wrap(INPUT_CH_ARR_ description)PERF_IMPRV{
     //Literally to many memory copying
     //Can be a SERIOUS problem for low cache CPUs
     int screen_width = strlen(description);
-    int wraps = screen_width/COLUMN_SIZE;
+    int wraps = screen_width/(COLUMN_SIZE);
     INPUT_CH_ARR_ store_temp[COLUMN_SIZE];
     memset(store_temp, '\0', (COLUMN_SIZE*sizeof(char *)));
     //Go throught all break points and display them
