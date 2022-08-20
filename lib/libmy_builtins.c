@@ -1,4 +1,8 @@
 #include "libmy_builtins.h"
+#include "libmy_handlers.h"
+#include "libmy_shell.h"
+#include <stdlib.h>
+#include <string.h>
 
 /*
     File Globals 
@@ -80,7 +84,47 @@ int Execute_Built_In(COMMAND_STRING_ argv){
     return 1;
 }
 
-int Command_SetColors();
+int Command_SetColors(COMMAND_STRING_ argv){
+
+    // 	FONT 		    FONT SIZE 		BG_COLOR
+    if(argv[1] == NULL || argv[2] == NULL || argv[3] == NULL)
+	    return 0;
+
+    //Opening the Xresources file
+    int file_desc;
+    if((file_desc = open("/home/user/.Xresources", O_APPEND | O_WRONLY)) == -1){
+	perror("Could not open Xresources");
+	exit(EXIT_FAILURE);
+    }
+
+    //Write to file
+    char temp_array[64];
+    sprintf(temp_array, "xterm*faceName: %s\n", argv[1]);
+
+    if(write(file_desc, temp_array, (sizeof("xterm*faceName: ")+sizeof(argv[1]))+1) == -1){
+        perror("Could not update Xresources");
+	exit(EXIT_FAILURE);
+    }
+
+    bzero(temp_array, 64);
+    sprintf(temp_array, "xterm*faceSize: %s\n", argv[2]);
+
+    if(write(file_desc, temp_array, (sizeof("xterm*faceSize: ")+sizeof(argv[2]))+1) == -1){
+        perror("Could not update Xresources");
+	exit(EXIT_FAILURE);
+    }
+
+    bzero(temp_array, 64);
+    sprintf(temp_array, "xterm*background: %s\n", argv[3]);
+
+    if(write(file_desc, temp_array, (sizeof("xterm*background: ")+sizeof(argv[3]))+1) == -1){
+        perror("Could not update Xresources");
+	exit(EXIT_FAILURE);
+    } 
+
+    return 1;
+
+}
 
 int Command_Cd(INPUT_CH_ARR_ directory){
         //if no dir just skip
