@@ -30,6 +30,16 @@ So far there are just couple of builtins, you can check them by running the comm
 
 <code>help</code>
 
+## Supported fonts
+
+Tested fonts:
+
+```diff
++ Monospace
++ Liberation
++ CascadiaCode
+```
+
 ## Dependencies
 
 The project is aimed to be as <i>extra</i> dependecies free as possible. Most of commonly used linux distributions (btw i use arch) should already be equiped with these dependecies.

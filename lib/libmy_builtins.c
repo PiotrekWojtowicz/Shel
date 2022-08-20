@@ -101,7 +101,7 @@ int Command_SetColors(COMMAND_STRING_ argv){
     char temp_array[64];
     sprintf(temp_array, "xterm*faceName: %s\n", argv[1]);
 
-    if(write(file_desc, temp_array, (sizeof("xterm*faceName: ")+ARRAY_LEN(argv[1],char))+1) == -1){
+    if(write(file_desc, temp_array, (sizeof("xterm*faceName: ")+strlen(argv[1]))) == -1){
         perror("Could not update Xresources");
 	exit(EXIT_FAILURE);
     }
