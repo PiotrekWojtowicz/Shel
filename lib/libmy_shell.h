@@ -7,6 +7,7 @@
 #include <signal.h>
 #include <wait.h>
 #include <string.h> 
+#include <fcntl.h>
 
 
 #ifndef MY_HANDS_1_0
