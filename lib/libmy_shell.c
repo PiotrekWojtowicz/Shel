@@ -99,7 +99,7 @@ void Initalize_Shell(){
     Initialize_Built_Ins(); //Should never throw
 
     char input[MAXLINE];
-    Console_Write("Welcome back v.2.1\n", "Shell Write Error");
+    Console_Write("Welcome back v.3.0\n", "Shell Write Error");
 
     do{
         //Readline wraper
