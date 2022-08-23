@@ -16,8 +16,8 @@ INCFLAG = $(foreach D, $(LIBSOURCE), -I$(D))
 DFLAGS = -fPIC
 
 #Locals
-WHEREAMI = ~/Shel
-FULLINCLUDEPATH = /home/user/Shel/include
+WHEREAMI = ~/Shel/Shel
+FULLINCLUDEPATH = /home/user/Shel/Shel/include
 XTERM = /home/user/.Xresources
 
 CSOURCE = $(WHEREAMI)

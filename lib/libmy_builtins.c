@@ -92,7 +92,7 @@ int Command_SetColors(COMMAND_STRING_ argv){
 
     //Opening the Xresources file
     int file_desc;
-    if((file_desc = open("/home/user/.Xresources", O_APPEND | O_WRONLY)) == -1){
+    if((file_desc = open(XTERM_COFNIG, O_APPEND | O_WRONLY)) == -1){
 	perror("Could not open Xresources");
 	exit(EXIT_FAILURE);
     }

@@ -17,6 +17,10 @@ typedef struct{
 #define COLUMN_SIZE 40
 #endif
 
+#ifndef XTERM_COFNIG
+#define XTERM_COFNIG "/home/user/.Xresources"
+#endif
+
 //Initialize builtins
 extern void Initialize_Built_Ins(void);
 extern int Builtin_Command(COMMAND_STRING_ argv);
